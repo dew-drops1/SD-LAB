@@ -1,0 +1,174 @@
+student@S1:~$ mkdir mca
+student@S1:~$ cd mca
+student@S1:~/mca$ mkdir rmca
+student@S1:~/mca$ mkdir lmca
+student@S1:~/mca$ cd lmca
+student@S1:~/mca/lmca$ cat > a.txt
+welcome
+to     
+ajce
+^C
+student@S1:~/mca/lmca$ cat > b.txt
+hello world.........
+^C
+student@S1:~/mca/lmca$ 
+student@S1:~/mca/lmca$ cd ..
+student@S1:~/mca$ cd rmca
+student@S1:~/mca/rmca$ cat > c.txt
+basic linux commands...
+^C
+student@S1:~/mca/rmca$ cd ..
+student@S1:~/mca$ cd lmca
+student@S1:~/mca/lmca$ cat a.txt >> b.txt
+student@S1:~/mca/lmca$ cat b.txt
+hello world.........
+welcome
+to 
+ajce
+student@S1:~/mca/lmca$ tac a.txt
+ajce
+to 
+welcome
+student@S1:~/mca/lmca$ cat -E a.txt
+welcome$
+to $
+ajce$
+student@S1:~/mca/lmca$ cat -A a.txt
+welcome$
+to $
+ajce$
+student@S1:~/mca/lmca$ cat > d.txt
+1
+
+
+2
+
+
+
+3
+4
+
+5
+^C
+student@S1:~/mca/lmca$ cat -s d.txt
+1
+
+2
+
+3
+4
+
+5
+student@S1:~/mca/lmca$ cat -b b.txt
+     1	hello world.........
+     2	welcome
+     3	to 
+     4	ajce
+student@S1:~/mca/lmca$ cat a.txt
+welcome
+to 
+ajce
+student@S1:~/mca/lmca$ cat -n b.txt
+     1	hello world.........
+     2	welcome
+     3	to 
+     4	ajce
+student@S1:~/mca/lmca$ cat -n a.txt
+     1	welcome
+     2	to 
+     3	ajce
+student@S1:~/mca/lmca$ man mv
+student@S1:~/mca/lmca$ mv a.txt b.txt
+student@S1:~/mca/lmca$ cat b.txt
+welcome
+to 
+ajce
+student@S1:~/mca/lmca$ man mv
+student@S1:~/mca/lmca$ ls
+b.txt  d.txt
+student@S1:~/mca/lmca$ mv -i b.txt d.txt
+mv: overwrite 'd.txt'? man mv
+student@S1:~/mca/lmca$ man mv
+student@S1:~/mca/lmca$ man mv
+student@S1:~/mca/lmca$ mv -n b.txt d.txt
+student@S1:~/mca/lmca$ cat d.txt
+1
+
+
+2
+
+
+
+3
+4
+
+5
+student@S1:~/mca/lmca$ cat > one.txt
+linux command...
+^C
+student@S1:~/mca/lmca$ 
+student@S1:~/mca/lmca$ mkdir student
+student@S1:~/mca/lmca$ ls
+b.txt  d.txt  one.txt  student
+student@S1:~/mca/lmca$ mv *.txt student
+student@S1:~/mca/lmca$ ls
+student
+student@S1:~/mca/lmca$ cd student
+student@S1:~/mca/lmca/student$ ls
+b.txt  d.txt  one.txt
+student@S1:~/mca/lmca/student$ mv -f b.txt d.txt
+student@S1:~/mca/lmca/student$ cat d.txt
+welcome
+to 
+ajce
+student@S1:~/mca/lmca/student$ ls
+d.txt  one.txt
+student@S1:~/mca/lmca/student$ cat one.txt
+linux command...
+student@S1:~/mca/lmca/student$ mv -b d.txt one.txt
+student@S1:~/mca/lmca/student$ cat one.txt
+welcome
+to 
+ajce
+student@S1:~/mca/lmca/student$ ls
+one.txt  one.txt~
+student@S1:~/mca/lmca/student$ cat one.txt~
+linux command...
+student@S1:~/mca/lmca/student$ man mv
+student@S1:~/mca/lmca/student$ cat > two.txt
+hai 
+^C
+student@S1:~/mca/lmca/student$ 
+student@S1:~/mca/lmca/student$ cat > three.txt
+hai     
+hello
+good morning   
+^C
+student@S1:~/mca/lmca/student$ mv -u three.txt two.txt
+student@S1:~/mca/lmca/student$ cat two.txt
+hai 
+hello
+good morning
+student@S1:~/mca/lmca/student$ mv -t two.txt three.txt
+mv: target 'two.txt' is not a directory
+student@S1:~/mca/lmca/student$ man mv
+student@S1:~/mca/lmca/student$ mkdir sem1
+student@S1:~/mca/lmca/student$ man mv
+student@S1:~/mca/lmca/student$ mv -t two.txt sem1
+mv: target 'two.txt' is not a directory
+student@S1:~/mca/lmca/student$ mv -t student sem1
+mv: failed to access 'student': No such file or directory
+student@S1:~/mca/lmca/student$ cd ..
+student@S1:~/mca/lmca$ mv -t student sem1
+mv: cannot stat 'sem1': No such file or directory
+student@S1:~/mca/lmca$ cd student
+student@S1:~/mca/lmca/student$ cd sem1
+student@S1:~/mca/lmca/student/sem1$ cd ..
+student@S1:~/mca/lmca/student$ ls
+one.txt  one.txt~  sem1  two.txt
+student@S1:~/mca/lmca/student$ cd ..
+student@S1:~/mca/lmca$ mv -t two.txt student
+mv: failed to access 'two.txt': No such file or directory
+student@S1:~/mca/lmca$ man mv
+student@S1:~/mca/lmca$ 
+

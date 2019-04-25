@@ -1,0 +1,100 @@
+student@T43:~$ echo welcome
+welcome
+student@T43:~$ read x
+12
+student@T43:~$ echo a
+a
+student@T43:~$ echo $x
+12
+student@T43:~$ man echo
+student@T43:~$ man echo
+student@T43:~$ read a
+10
+student@T43:~$ read b
+2
+student@T43:~$ echo a
+a
+student@T43:~$ echo $a
+10
+student@T43:~$ echo $a + $b
+10 + 2
+student@T43:~$ echo $a+$b
+10+2
+student@T43:~$ man -n echo
+man: invalid option -- 'n'
+Try 'man --help' or 'man --usage' for more information.
+student@T43:~$ echo -n read
+readstudent@T43:~$ echo -e read
+read
+student@T43:~$ echo -n read
+readstudent@T43:~$ echo diff
+diff
+student@T43:~$ echo -n diff
+diffstudent@T43:~$ echo -e diff
+diff
+student@T43:~$ man echo
+student@T43:~$ echo --help diff
+--help diff
+student@T43:~$ echo the value of a is $a
+the value of a is 10
+student@T43:~$ echo -E diff
+diff
+student@T43:~$ man read
+student@T43:~$ man man
+student@T43:~$ x=10
+student@T43:~$ y=21
+student@T43:~$ sum=$((x+y))
+student@T43:~$ echo $sum
+31
+student@T43:~$ ls-l
+ls-l: command not found
+student@T43:~$ ls-l file
+ls-l: command not found
+student@T43:~$ echo hello \bworld \bwelcom\btoe
+hello bworld bwelcombtoe
+student@T43:~$ ^C
+student@T43:~$ echo -e "hello \bworld"
+helloworld
+student@T43:~$ echo -e "hello world"
+hello world
+student@T43:~$ echo -e hello \bworld
+hello bworld
+student@T43:~$ echo "this \nis\bmy \nnew \nhouse"
+this \nis\bmy \nnew \nhouse
+student@T43:~$ echo -e "this \nis\bmy \nnew \nhouse"
+this 
+imy 
+new 
+house
+student@T43:~$ echo -e "this \nis \nmy \nnew \nhouse"
+this 
+is 
+my 
+new 
+house
+student@T43:~$ echo -e "this \tis \tmy \tnew \thouse"
+this 	is 	my 	new 	house
+student@T43:~$ echo -n "this \tis \tmy \tnew \thouse"
+this \tis \tmy \tnew \thousestudent@T43:~$ echo -n "this \tis \tmy \tnew \thouse"                    e        nis \nmy \nnew \nhouse"
+this 
+is 
+my 
+new 
+house
+student@T43:~$ echo -E "this \nis \nmy \nnew \nhouse"
+this \nis \nmy \nnew \nhouse
+student@T43:~$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

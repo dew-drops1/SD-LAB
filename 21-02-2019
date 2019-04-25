@@ -1,0 +1,98 @@
+
+1(styles.xmlPKQUN�e^�.%�0META-INF/manifest.xmlPKe&2student@T43:~/mca/rmca/a/c1$ 
+student@T43:~/mca/rmca/a/c1$ cat new.txt
+Android is a mobile operating system developed by Google. It is based on a modified version of the Linux kernel and other open source software, and is designed primarily for touchscreen mobile devices such as smartphones and tablets. In addition, Google has further developed Android TV for televisions, Android Auto for cars, and Wear OS for wrist watches, each with a specialized user interface. Variants of Android are also used on game consoles, digital cameras, PCs and other electronics. 
+Initially developed by Android Inc., which Google bought in 2005, Android was unveiled in 2007, with the first commercial Android device launched in September 2008. The operating system has since gone through multiple major releases, with the current version being 9 "Pie", released in August 2018. The core Android source code is known as Android Open Source Project (AOSP), and is primarily licensed under the Apache License. 
+
+student@T43:~/mca/rmca/a/c1$ more -s ad.txt
+Android is a mobile operating system developed by Google. It is based on a modif
+ied version of the Linux kernel and other open source software, and is designed 
+primarily for touchscreen mobile devices such as smartphones and tablets. In add
+ition, Google has further developed Android TV for televisions, Android Auto for
+ cars, and Wear OS for wrist watches, each with a specialized user interface. Va
+riants of Android are also used on game consoles, digital cameras, PCs and other
+ electronics.
+
+Initially developed by Android Inc., which Google bought in 2005, Android was un
+veiled in 2007, with the first commercial Android device launched in September 2
+008. The operating system has since gone through multiple major releases, with t
+he current version being 9 "Pie", released in August 2018. The core Android sour
+ce code is known as Android Open Source Project (AOSP), and is primarily license
+d under the Apache License. 
+student@T43:~/mca/rmca/a/c1$ more -10 ad.txt
+Android is a mobile operating system developed by Google. It is based on a modif
+ied version of the Linux kernel and other open source software, and is designed 
+primarily for touchscreen mobile devices such as smartphones and tablets. In add
+ition, Google has further developed Android TV for televisions, Android Auto for
+ cars, and Wear OS for wrist watches, each with a specialized user interface. Va
+riants of Android are also used on game consoles, digital cameras, PCs and other
+ electronics.
+
+Initially developed by Android Inc., which Google bought in 2005, Android was un
+veiled in 2007, with the first commercial Android device launched in September 2
+008. The operating system has since gone through multiple major releases, with t
+student@T43:~/mca/rmca/a/c1$ more +5 n.txt
+more: stat of n.txt failed: No such file or directory
+student@T43:~/mca/rmca/a/c1$ more +5 n1.txt
+more: stat of n1.txt failed: No such file or directory
+student@T43:~/mca/rmca/a/c1$ more +10 keraqla.txt
+more: stat of keraqla.txt failed: No such file or directory
+student@T43:~/mca/rmca/a/c1$ more +10 kerala.txt
+student@T43:~/mca/rmca/a/c1$ ^C
+student@T43:~/mca/rmca/a/c1$ more kerala.txt
+Kerala (/ˈkɛrələ/) is a state on the southwestern, Malabar Coast of India. It wa
+s formed on 1 November 1956, following passage of the States Reorganisation Act,
+ by combining Malayalam-speaking regions. Spread over 38,863 km2 (15,005 sq mi),
+ Kerala is the twenty second largest Indian state by area. It is bordered by Kar
+nataka to the north and northeast, Tamil Nadu to the east and south, and the Lak
+shadweep Sea and Arabian Sea to the west. With 33,387,677 inhabitants as per the
+ 2011 Census, Kerala is the thirteenth-largest Indian state by population. It is
+ divided into 14 districts with the capital being Thiruvananthapuram. Malayalam 
+is the most widely spoken language and is also the official language of the stat
+e.[9]
+
+The Chera Dynasty was the first prominent kingdom based in Kerala. The Ay kingdo
+m in the deep south and the Ezhimala kingdom in the north formed the other kingd
+oms in the early years of the Common Era (CE or AD). The region had been a promi
+nent spice exporter since 3000 BCE. The region's prominence in trade was noted i
+n the works of Pliny as well as the Periplus around 100 CE. In the 15th century,
+ the spice trade attracted Portuguese traders to Kerala, and paved the way for E
+uropean colonisation of India. At the time of Indian independence movement in th
+e early 20th century, there were two major princely states in Kerala-Travancore 
+State and the Kingdom of Cochin. They united to form the state of Thiru-Kochi in
+ 1949. The Malabar region, in the northern part of Kerala had been a part of the
+ Madras province of British India, which later became a part of the Madras State
+ post-independence. After the States Reorganisation Act, 1956, the modern-day st
+student@T43:~/mca/rmca/a/c1$ more -3 kerala.txt
+Kerala (/ˈkɛrələ/) is a state on the southwestern, Malabar Coast of India. It wa
+s formed on 1 November 1956, following passage of the States Reorganisation Act,
+ by combining Malayalam-speaking regions. Spread over 38,863 km2 (15,005 sq mi),
+ Kerala is the twenty second largest Indian state by area. It is bordered by Kar
+nataka to the north and northeast, Tamil Nadu to the east and south, and the Lak
+shadweep Sea and Arabian Sea to the west. With 33,387,677 inhabitants as per the
+ 2011 Census, Kerala is the thirteenth-largest Indian state by population. It is
+ divided into 14 districts with the capital being Thiruvananthapuram. Malayalam 
+is the most widely spoken language and is also the official language of the stat
+e.[9]
+
+The Chera Dynasty was the first prominent kingdom based in Kerala. The Ay kingdo
+m in the deep south and the Ezhimala kingdom in the north formed the other kingd
+oms in the early years of the Common Era (CE or AD). The region had been a promi
+nent spice exporter since 3000 BCE. The region's prominence in trade was noted i
+n the works of Pliny as well as the Periplus around 100 CE. In the 15th century,
+ the spice trade attracted Portuguese traders to Kerala, and paved the way for E
+student@T43:~/mca/rmca/a/c1$ less n3.txt
+student@T43:~/mca/rmca/a/c1$ less -E n3.txt
+student@T43:~/mca/rmca/a/c1$ less -n n3.txt
+student@T43:~/mca/rmca/a/c1$ less -N n3.txt
+student@T43:~/mca/rmca/a/c1$ less -M n3.txt
+student@T43:~/mca/rmca/a/c1$ less -F n3.txt
+student@T43:~/mca/rmca/a/c1$ less -g n3.txt
+student@T43:~/mca/rmca/a/c1$ less -G n3.txt
+student@T43:~/mca/rmca/a/c1$ less -2 kerala.txt
+student@T43:~/mca/rmca/a/c1$ less /kindom kerala.txt
+/kindom: No such file or directory
+student@T43:~/mca/rmca/a/c1$ less +/kindom kerala.txt
+student@T43:~/mca/rmca/a/c1$ less +/kingdom kerala.txt
+student@T43:~/mca/rmca/a/c1$ 
+

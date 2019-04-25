@@ -1,0 +1,178 @@
+student@T43:~$ mkdir ajce
+student@T43:~$ cd ajce
+student@T43:~/ajce$ mkdir mca
+student@T43:~/ajce$ pwd
+/home/student/ajce
+student@T43:~/ajce$ cd mca
+student@T43:~/ajce/mca$ mkdir le
+student@T43:~/ajce/mca$ pwd
+/home/student/ajce/mca
+student@T43:~/ajce/mca$ mkdir rmca
+student@T43:~/ajce/mca$ mkdir intmca
+student@T43:~/ajce/mca$ cd rmca
+student@T43:~/ajce/mca/rmca$ cd ..
+student@T43:~/ajce/mca$ pwd
+/home/student/ajce/mca
+student@T43:~/ajce/mca$ cd ~
+student@T43:~$ cd le
+bash: cd: le: No such file or directory
+student@T43:~$ cd rmca
+bash: cd: rmca: No such file or directory
+student@T43:~$ cd ajce
+student@T43:~/ajce$ cd mca
+student@T43:~/ajce/mca$ cd ~
+student@T43:~$ cd /
+student@T43:/$ cd ~
+student@T43:~$ cd le
+bash: cd: le: No such file or directory
+student@T43:~$ cd ajce
+student@T43:~/ajce$ cd mca
+student@T43:~/ajce/mca$ pwd
+/home/student/ajce/mca
+student@T43:~/ajce/mca$ cd /
+student@T43:/$ cd ~
+student@T43:~$ cd ajce
+student@T43:~/ajce$ cd mca
+student@T43:~/ajce/mca$ cd le
+student@T43:~/ajce/mca/le$ cd /
+student@T43:/$ mkdir COURSE
+mkdir: cannot create directory ‘COURSE’: Permission denied
+student@T43:/$ CD ~
+CD: command not found
+student@T43:/$ cd ~
+student@T43:~$ mkdir course
+student@T43:~$ cd course
+student@T43:~/course$ mkdir mca
+student@T43:~/course$ cd ..
+student@T43:~$ cd mca
+bash: cd: mca: No such file or directory
+student@T43:~$ cd ..
+student@T43:/home$ ls
+android  mca  student
+student@T43:/home$ ls -l
+total 12
+drwxr-xr-x 23 android android 4096 Jan 30 13:07 android
+drwxr-xr-x 23 mca     mca     4096 Nov 13 08:36 mca
+drwxr-xr-x 27 student student 4096 Jan 31 14:44 student
+student@T43:/home$ cd/
+bash: cd/: No such file or directory
+student@T43:/home$ cd ~
+student@T43:~$ cd ajce
+student@T43:~/ajce$ cd mca
+student@T43:~/ajce/mca$ cd rmca
+student@T43:~/ajce/mca/rmca$ ls
+student@T43:~/ajce/mca/rmca$ ls -l
+total 0
+student@T43:~/ajce/mca/rmca$ cd mcaa
+bash: cd: mcaa: No such file or directory
+student@T43:~/ajce/mca/rmca$ cd /
+student@T43:/$ cd ~
+student@T43:~$ cd ajce
+student@T43:~/ajce$ cd mca
+student@T43:~/ajce/mca$ ls
+intmca  le  rmca
+student@T43:~/ajce/mca$ ls -l
+total 12
+drwxr-xr-x 2 student student 4096 Jan 31 14:35 intmca
+drwxr-xr-x 2 student student 4096 Jan 31 14:34 le
+drwxr-xr-x 2 student student 4096 Jan 31 14:34 rmca
+student@T43:~/ajce/mca$ ls >out.txt
+student@T43:~/ajce/mca$ ls ..
+mca
+student@T43:~/ajce/mca$ ls /
+bin    etc             lib         mnt   run   stage2.img  var
+boot   home            lib64       opt   sbin  sys         vmlinuz
+cdrom  initrd.img      lost+found  proc  snap  tmp         vmlinuz.old
+dev    initrd.img.old  media       root  srv   usr
+student@T43:~/ajce/mca$ ls ajce/mca
+ls: cannot access 'ajce/mca': No such file or directory
+student@T43:~/ajce/mca$ cd mca
+bash: cd: mca: No such file or directory
+student@T43:~/ajce/mca$ cd /
+student@T43:/$ cd ~
+student@T43:~$ cd mca
+bash: cd: mca: No such file or directory
+student@T43:~$ cd ajce
+student@T43:~/ajce$ cd ..
+student@T43:~$ ls ajce/mca
+intmca  le  out.txt  rmca
+student@T43:~$ cd mca
+bash: cd: mca: No such file or directory
+student@T43:~$ cd ~
+student@T43:~$ cd ajce
+student@T43:~/ajce$ cd mca
+student@T43:~/ajce/mca$ cd rmca
+student@T43:~/ajce/mca/rmca$ mkdir student
+student@T43:~/ajce/mca/rmca$ cd ..
+student@T43:~/ajce/mca$ cd ..
+student@T43:~/ajce$ ls mca/rmca
+student
+student@T43:~/ajce$ cd ~
+student@T43:~$ ls -t
+course   Downloads  nw1     PycharmProjects  Public     examples.desktop
+ajce     susan      sandra  Music            Templates
+Desktop  Documents  snap    Pictures         Videos
+student@T43:~$ cd ..
+student@T43:/home$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T43:/home$ cd /
+student@T43:/$ cd ..
+student@T43:/$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T43:/$ cd ~
+student@T43:~$ cd ajce
+student@T43:~/ajce$ ls -d */
+mca/
+student@T43:~/ajce$ cd mca
+student@T43:~/ajce/mca$ ls -d */
+intmca/  le/  rmca/
+student@T43:~/ajce/mca$ ls -t
+rmca  out.txt  intmca  le
+student@T43:~/ajce/mca$ ls -d $pwd/*
+/bin   /cdrom  /etc   /initrd.img      /lib    /lost+found  /mnt  /proc  /run   /snap  /stage2.img  /tmp  /var      /vmlinuz.old
+/boot  /dev    /home  /initrd.img.old  /lib64  /media       /opt  /root  /sbin  /srv   /sys         /usr  /vmlinuz
+student@T43:~/ajce/mca$ man cd
+No manual entry for cd
+student@T43:~/ajce/mca$ man mkdir
+student@T43:~/ajce/mca$ man pwd
+student@T43:~/ajce/mca$ man ls
+student@T43:~/ajce/mca$ ls ..
+mca
+student@T43:~/ajce/mca$ ls /
+bin    etc             lib         mnt   run   stage2.img  var
+boot   home            lib64       opt   sbin  sys         vmlinuz
+cdrom  initrd.img      lost+found  proc  snap  tmp         vmlinuz.old
+dev    initrd.img.old  media       root  srv   usr
+student@T43:~/ajce/mca$ ls ~
+ajce     Documents         Music     Public           snap       Videos
+course   Downloads         nw1       PycharmProjects  susan
+Desktop  examples.desktop  Pictures  sandra           Templates
+student@T43:~/ajce/mca$ ls -a
+.  ..  intmca  le  out.txt  rmca
+student@T43:~/ajce/mca$ ls -la
+total 24
+drwxr-xr-x 5 student student 4096 Jan 31 14:58 .
+drwxr-xr-x 3 student student 4096 Jan 31 14:32 ..
+drwxr-xr-x 2 student student 4096 Jan 31 14:35 intmca
+drwxr-xr-x 2 student student 4096 Jan 31 14:34 le
+-rw-r--r-- 1 student student   23 Jan 31 14:58 out.txt
+drwxr-xr-x 3 student student 4096 Jan 31 15:09 rmca
+student@T43:~/ajce/mca$ ls -s
+total 16
+4 intmca  4 le  4 out.txt  4 rmca
+student@T43:~/ajce/mca$ ls *
+out.txt
+
+intmca:
+
+le:
+
+rmca:
+student
+student@T43:~/ajce/mca$ ls -d $pwd/*
+/bin    /etc             /lib         /mnt   /run   /stage2.img  /var
+/boot   /home            /lib64       /opt   /sbin  /sys         /vmlinuz
+/cdrom  /initrd.img      /lost+found  /proc  /snap  /tmp         /vmlinuz.old
+/dev    /initrd.img.old  /media       /root  /srv   /usr
+student@T43:~/ajce/mca$ 
+

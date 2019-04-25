@@ -1,0 +1,262 @@
+student@T43:~$ man cp
+student@T43:~$ mkdir mca
+student@T43:~$ cd mca
+student@T43:~/mca$ mkdir lmca
+student@T43:~/mca$ mkdir rmca
+student@T43:~/mca$ cat file1.txt
+cat: file1.txt: No such file or directory
+student@T43:~/mca$ cat > file1.txt
+cp command stands for copy..
+^C
+student@T43:~/mca$ cd rmca
+student@T43:~/mca/rmca$ cat > file2.txt
+welcome
+to    
+linux
+^C
+student@T43:~/mca/rmca$ cat > file3.txt
+hai
+^C
+student@T43:~/mca/rmca$ man cp
+student@T43:~/mca/rmca$ cp file2.txt file3.txt
+student@T43:~/mca/rmca$ cat file3.txt
+welcome
+to 
+linux
+student@T43:~/mca/rmca$ man cp
+student@T43:~/mca/rmca$ cat > f4.txt
+1
+2
+^C
+student@T43:~/mca/rmca$ 
+student@T43:~/mca/rmca$ cp f4.txt file3.txt
+student@T43:~/mca/rmca$ cat file3.txt
+1
+2
+student@T43:~/mca/rmca$ man cp
+student@T43:~/mca/rmca$ cp -n file2.txt f4.txt
+student@T43:~/mca/rmca$ cat f4.txt
+1
+2
+student@T43:~/mca/rmca$ man cp
+student@T43:~/mca/rmca$ cp -H file2.txt f3.txt
+student@T43:~/mca/rmca$ cat f3.txt
+welcome
+to 
+linux
+student@T43:~/mca/rmca$ man cp
+student@T43:~/mca/rmca$ cd ..
+student@T43:~/mca$ cat file1.txt
+cp command stands for copy..
+student@T43:~/mca$ cat file2.txt
+cat: file2.txt: No such file or directory
+student@T43:~/mca$ cd rmca
+student@T43:~/mca/rmca$ ls
+f3.txt  f4.txt  file2.txt  file3.txt
+student@T43:~/mca/rmca$ cat f3.txt
+welcome
+to 
+linux
+student@T43:~/mca/rmca$ cat f4.txt
+1
+2
+student@T43:~/mca/rmca$ cat file2.txt
+welcome
+to 
+linux
+student@T43:~/mca/rmca$ cat file3.txt
+1
+2
+student@T43:~/mca/rmca$ cd ..
+student@T43:~/mca$ cd lmca
+student@T43:~/mca/lmca$ cat > c1.txt
+1
+2
+^C
+student@T43:~/mca/lmca$ cat > c2.4
+5
+^C          
+student@T43:~/mca/lmca$ cat > c2.txt
+4
+5
+^C
+student@T43:~/mca/lmca$ cat > c3.txt
+6
+7
+^C
+student@T43:~/mca/lmca$ 
+student@T43:~/mca/lmca$ cp -b c1.txt
+cp: missing destination file operand after 'c1.txt'
+Try 'cp --help' for more information.
+student@T43:~/mca/lmca$ mkdir c1
+student@T43:~/mca/lmca$ cp c1.txt c1
+student@T43:~/mca/lmca$ ls
+c1  c1.txt  c2.4  c2.txt  c3.txt
+student@T43:~/mca/lmca$ ls c1
+c1.txt
+student@T43:~/mca/lmca$ mkdir a
+student@T43:~/mca/lmca$ cp c1 a
+cp: -r not specified; omitting directory 'c1'
+student@T43:~/mca/lmca$ cp -r  c1 a
+student@T43:~/mca/lmca$ ls a
+c1
+student@T43:~/mca/lmca$ ls
+a  c1  c1.txt  c2.4  c2.txt  c3.txt
+student@T43:~/mca/lmca$ cp *.txt a
+student@T43:~/mca/lmca$ ls a
+c1  c1.txt  c2.txt  c3.txt
+student@T43:~/mca/lmca$ cp -l c1.txt c2.txt
+cp: cannot create hard link 'c2.txt' to 'c1.txt': File exists
+student@T43:~/mca/lmca$ cp -p c1.txt c2.txt
+student@T43:~/mca/lmca$ cat c2.txt
+1
+2
+student@T43:~/mca/lmca$ cp -b c1.txt c2.txt
+student@T43:~/mca/lmca$ ls
+a  c1  c1.txt  c2.4  c2.txt  c2.txt~  c3.txt
+student@T43:~/mca/lmca$ cat c2.txt
+1
+2
+student@T43:~/mca/lmca$ cat c1.txt
+1
+2
+student@T43:~/mca/lmca$ cat c2.txt~
+1
+2
+student@T43:~/mca/lmca$ cat > ab.txt
+aaaaaa
+^C
+student@T43:~/mca/lmca$ 
+student@T43:~/mca/lmca$ cp -b c2.txt ab.txt
+student@T43:~/mca/lmca$ cat ab.txt
+1
+2
+student@T43:~/mca/lmca$ ls
+a  ab.txt  ab.txt~  c1  c1.txt  c2.4  c2.txt  c2.txt~  c3.txt
+student@T43:~/mca/lmca$ cat ab.txt~
+aaaaaa
+student@T43:~/mca/lmca$ cp -i ab.txt~ c2.txt
+cp: overwrite 'c2.txt'? n
+student@T43:~/mca/lmca$ cp -p c2.txt c3.txt
+student@T43:~/mca/lmca$ cat c3.txt
+1
+2
+student@T43:~/mca/lmca$ cat c3.txt
+1
+2
+student@T43:~/mca/lmca$ cat ab.txt
+1
+2
+student@T43:~/mca/lmca$ cat ab.txt~
+aaaaaa
+student@T43:~/mca/lmca$ cp -u ab.txt c3.txt
+student@T43:~/mca/lmca$ cat c3.txt
+1
+2
+student@T43:~/mca/lmca$ cp -s .bak ab.txt c3.txt
+cp: target 'c3.txt' is not a directory
+student@T43:~/mca/lmca$ ls
+a  ab.txt  ab.txt~  c1  c1.txt  c2.4  c2.txt  c2.txt~  c3.txt
+student@T43:~/mca/lmca$ cp -s .bak ab.txt a
+cp: cannot stat '.bak': No such file or directory
+cp: a/ab.txt: can make relative symbolic links only in current directory
+student@T43:~/mca/lmca$ cp -u * a
+cp: -r not specified; omitting directory 'a'
+cp: -r not specified; omitting directory 'c1'
+student@T43:~/mca/lmca$ cp -u  a
+cp: missing destination file operand after 'a'
+Try 'cp --help' for more information.
+student@T43:~/mca/lmca$ cat c1.txt
+1
+2
+student@T43:~/mca/lmca$ cat c3.txt
+1
+2
+student@T43:~/mca/lmca$ cat > c3.txt
+333333333333
+^C
+student@T43:~/mca/lmca$ cat c3.txt
+333333333333
+student@T43:~/mca/lmca$ cp -a c1.txt c3.txt
+student@T43:~/mca/lmca$ cat c3.txt
+1
+2
+student@T43:~/mca/lmca$ cat c3.txt
+1
+2
+student@T43:~/mca/lmca$ xxxxxxxxxxxxx
+xxxxxxxxxxxxx: command not found
+student@T43:~/mca/lmca$ ^C
+student@T43:~/mca/lmca$ cp -l c1.txt c3.txt
+cp: cannot create hard link 'c3.txt' to 'c1.txt': File exists
+student@T43:~/mca/lmca$ cp -l c1.txt c5.txt
+student@T43:~/mca/lmca$ cat c5.txt
+1
+2
+student@T43:~/mca/lmca$ cat c5.txt
+1
+2
+student@T43:~/mca/lmca$ cp -p c1.txt c5.txt
+cp: 'c1.txt' and 'c5.txt' are the same file
+student@T43:~/mca/lmca$ cp -p c1.txt ab.txt~
+student@T43:~/mca/lmca$ cat ab.txt~
+1
+2
+student@T43:~/mca/lmca$ cat c1.txt
+1
+2
+student@T43:~/mca/lmca$ cat > c6.txt
+^C
+student@T43:~/mca/lmca$ cp -l c1.txt c6.txt
+cp: cannot create hard link 'c6.txt' to 'c1.txt': File exists
+student@T43:~/mca/lmca$ cp -l c1.txt c7.txt
+student@T43:~/mca/lmca$ cp -f c1.txt c7.txt
+cp: 'c1.txt' and 'c7.txt' are the same file
+student@T43:~/mca/lmca$ cat ab.txt
+1
+2
+student@T43:~/mca/lmca$ cat c5.txt
+1
+2
+student@T43:~/mca/lmca$ cat > ab.txt
+1234567789999
+^C
+student@T43:~/mca/lmca$ 
+student@T43:~/mca/lmca$ cp -f c5.txt ab.txt
+student@T43:~/mca/lmca$ cat ab.txt
+1
+2
+student@T43:~/mca/lmca$ ls
+a       ab.txt~  c1.txt  c2.txt   c3.txt  c6.txt
+ab.txt  c1       c2.4    c2.txt~  c5.txt  c7.txt
+student@T43:~/mca/lmca$ ls -l c1.txt
+-rw-r--r-- 3 student student 4 Feb 11 11:35 c1.txt
+student@T43:~/mca/lmca$ chmod u=r c1.txt 
+student@T43:~/mca/lmca$ ls -l c1.txt
+-r--r--r-- 3 student student 4 Feb 11 11:35 c1.txt
+student@T43:~/mca/lmca$ cp c2.txt c1.txt
+cp: cannot create regular file 'c1.txt': Permission denied
+student@T43:~/mca/lmca$ cp -f c2.txt c1.txt
+student@T43:~/mca/lmca$ cat c1.txt
+1
+2
+student@T43:~/mca/lmca$ cp -a c2.txt cb.txt
+student@T43:~/mca/lmca$ cat cb.txt
+1
+2
+student@T43:~/mca/lmca$ cat > cb.txt
+abcdsfgyuiiiuji
+^C
+student@T43:~/mca/lmca$ cp -v cb.txt c2.txt
+'cb.txt' -> 'c2.txt'
+student@T43:~/mca/lmca$ cat c2.txt
+abcdsfgyuiiiuji
+student@T43:~/mca/lmca$ cp -p cb.txt c2.txt
+student@T43:~/mca/lmca$ cat c2.txt
+abcdsfgyuiiiuji
+student@T43:~/mca/lmca$ cp -p cb.txt a
+student@T43:~/mca/lmca$ cd a
+student@T43:~/mca/lmca/a$ ls
+ab.txt  ab.txt~  c1  c1.txt  c2.4  c2.txt  c2.txt~  c3.txt  cb.txt
+student@T43:~/mca/lmca/a$ 
+

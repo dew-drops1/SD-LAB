@@ -1,0 +1,57 @@
+student@S33:~$ gedit udpBaseServer.java
+student@S33:~$ javac udpBaseServer.java
+student@S33:~$ java udpBaseServer
+Client:-hai
+helooo
+Client:-ennadukkuaa
+Client:-sugalle?
+Client:-serikkum?
+
+
+
+
+student@S33:~$ gedit udpBaseClient.java
+student@S33:~$ javac udpBaseClient.java
+udpBaseClient.java:6: error: class udpBaseClient_2 is public, should be declared in a file named udpBaseClient_2.java
+public class udpBaseClient_2 
+       ^
+1 error
+student@S33:~$ javac udpBaseClient.java
+udpBaseClient.java:6: error: class udpBaseClient_2 is public, should be declared in a file named udpBaseClient_2.java
+public class udpBaseClient_2 
+       ^
+1 error
+student@S33:~$ javac udpBaseClient.java
+student@S33:~$ java udpBaseClient
+hai
+ennadukkuaa
+sugalle?
+serikkum?
+
+
+student@S33:~$ gedit Server2.java
+student@S33:~$ javac Server2.java
+student@S33:~$ java Server2
+Server is running...
+connection establised
+server send echo to client 
+server send echo to client 
+
+
+
+
+student@S33:~$ gedit Client2.java
+student@S33:~$ javac Client2.java
+student@S33:~$ java Client2
+ Enter text..
+ if client 'quit' type  exit
+haaiiiiiiiiiiii
+Server said : haaiiiiiiiiiiii
+Enter text 
+whats doing?
+Server said : whats doing?
+Enter text 
+
+
+
+

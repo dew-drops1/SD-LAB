@@ -1,0 +1,311 @@
+student@T43:~$ gedit p1.sh
+student@T43:~$ chmod +x p1.sh
+student@T43:~$ ./p1.sh
+enter two numbers
+./p1.sh: line 2: read: `a,': not a valid identifier
+student@T43:~$ ./p1.sh
+enter two numbers
+4 8
+student@T43:~$ ./p1.sh
+enter two numbers
+48
+student@T43:~$ ./p1.sh
+enter two numbers
+45 78
+not equal
+student@T43:~$ ./p1.sh
+enter two numbers
+14 12
+14 is greater than 12
+student@T43:~$ ./p1.sh
+enter two numbers
+15 78
+./p1.sh: line 9: [: -ls: binary operator expected
+not equal
+student@T43:~$ ./p1.sh
+enter two numbers
+45 87
+./p1.sh: line 9: [: -ls: binary operator expected
+not equal
+student@T43:~$ ./p1.sh
+enter two numbers
+12 12
+numbers are equal
+student@T43:~$ ./p1.sh
+enter two numbers
+45 78
+not equal
+student@T43:~$ ./p1.sh
+enter two numbers
+21 21
+numbers are equal
+student@T43:~$ ./p1.sh
+enter two numbers
+45 87
+ 87 is  less than 45
+student@T43:~$ ./p1.sh
+enter two numbers
+45 45
+numbers are equal
+student@T43:~$ ./p1.sh
+enter two numbers
+12 58
+ 12 is  less than 58
+student@T43:~$ ./p1.sh
+enter two numbers
+87 15 
+87 is greater than 15
+student@T43:~$ 18 18
+18: command not found
+student@T43:~$ ./p1.sh
+enter two numbers
+48 18
+48 is greater than 18
+student@T43:~$ ./p1.sh
+enter two numbers
+45 45
+numbers are equal
+student@T43:~$ ./p1.sh
+enter two numbers
+25 28
+ 25 is  less than 28
+student@T43:~$ ./p1.sh
+enter two numbers
+36 30
+36 is greater than 30
+student@T43:~$ ./p1.sh
+enter two numbers
+48 48
+numbers are equal
+student@T43:~$ gedit even.sh
+student@T43:~$ chmod +x even.sh
+student@T43:~$ ./even.sh
+enter a number
+78
+./even.sh: line 3: [: too many arguments
+78 is odd number
+student@T43:~$ ./even.sh
+enter a number
+45
+./even.sh: line 3: y: command not found
+./even.sh: line 4: [: -eq: unary operator expected
+45 is odd number
+student@T43:~$ ./even.sh
+enter a number
+25
+expr: syntax error
+./even.sh: line 3: =: command not found
+./even.sh: line 4: [: -eq: unary operator expected
+25 is odd number
+student@T43:~$ ./even.sh
+enter a number
+87
+./even.sh: line 3: =: command not found
+./even.sh: line 4: [: -eq: unary operator expected
+87 is odd number
+student@T43:~$ ./even.sh
+enter a number
+65
+expr: syntax error
+./even.sh: line 3: =: command not found
+./even.sh: line 4: [: -eq: unary operator expected
+65 is odd number
+student@T43:~$ chmod +x even.sh
+student@T43:~$ ./even.sh
+enter a number
+78
+./even.sh: line 3: [: too many arguments
+78 is odd number
+student@T43:~$ ./even.sh
+enter a number
+48
+48 is even number
+student@T43:~$ 13
+13: command not found
+student@T43:~$ ./even.sh
+enter a number
+13
+13 is odd number
+student@T43:~$ 0
+0: command not found
+student@T43:~$ ./even.sh
+enter a number
+0
+0 is even number
+student@T43:~$ gedit leapyear.sh
+student@T43:~$ chmod +x leapyear.sh
+student@T43:~$ ./leapyear.sh
+enter a year
+2013
+2013 is not leap year
+student@T43:~$ ./leapyear.sh
+enter a year
+2016
+2016 is leap year
+student@T43:~$ ./leapyear.sh
+enter a year
+2020
+2020 is leap year
+student@T43:~$ gedit alpha.sh
+student@T43:~$ chmod +x alpha.sh
+student@T43:~$ ./alpha.sh
+enter a alphabet/digit
+a
+./alpha.sh: line 3: [: a: integer expression expected
+./alpha.sh: line 6: [: a: integer expression expected
+./alpha.sh: line 9: [: a: integer expression expected
+./alpha.sh: line 12: [: a: integer expression expected
+./alpha.sh: line 15: [: a: integer expression expected
+a is cosonant
+student@T43:~$ ./alpha.sh
+enter a alphabet/digit
+h
+./alpha.sh: line 3: [: h: integer expression expected
+./alpha.sh: line 6: [: h: integer expression expected
+./alpha.sh: line 9: [: h: integer expression expected
+./alpha.sh: line 12: [: h: integer expression expected
+./alpha.sh: line 15: [: h: integer expression expected
+h is cosonant
+student@T43:~$ ./alpha.sh
+enter a alphabet/digit
+i
+./alpha.sh: line 3: [: i: integer expression expected
+./alpha.sh: line 6: [: i: integer expression expected
+./alpha.sh: line 9: [: i: integer expression expected
+./alpha.sh: line 12: [: i: integer expression expected
+./alpha.sh: line 15: [: i: integer expression expected
+i is cosonant
+student@T43:~$ ./alpha.sh
+enter a alphabet/digit
+a
+./alpha.sh: line 3: [: a: integer expression expected
+./alpha.sh: line 6: [: a: integer expression expected
+./alpha.sh: line 9: [: a: integer expression expected
+./alpha.sh: line 12: [: a: integer expression expected
+./alpha.sh: line 15: [: a: integer expression expected
+a is cosonant
+student@T43:~$ ./alpha.sh
+enter a alphabet/digit
+f
+./alpha.sh: line 3: [: f: integer expression expected
+consonant
+student@T43:~$ ./alpha.sh
+enter a alphabet/digit
+i
+./alpha.sh: line 3: [: i: integer expression expected
+consonant
+student@T43:~$ gedit natural.sh
+student@T43:~$ chmod +x natural.sh
+student@T43:~$ ./natural.sh
+enter a number
+10
+10
+./natural.sh: line 3: ((: 10-- : syntax error: operand expected (error token is "- ")
+student@T43:~$ ./natural.sh
+enter a number
+8
+8
+student@T43:~$ ./natural.sh
+enter a number
+10
+10
+student@T43:~$ ./natural.sh
+enter a number
+84
+84
+student@T43:~$ ./natural.sh
+enter a number
+7
+7
+6
+5
+4
+3
+2
+1
+student@T43:~$ ./natural.sh
+enter a number
+8
+8
+7
+6
+5
+4
+3
+2
+1
+student@T43:~$ gedit multi.sh
+student@T43:~$ chmod +x multi.sh
+student@T43:~$ ./multi.sh
+enter a number
+5
+1 * 5 = 5
+2 * 5 = 10
+3 * 5 = 15
+4 * 5 = 20
+5 * 5 = 25
+6 * 5 = 30
+7 * 5 = 35
+8 * 5 = 40
+9 * 5 = 45
+10 * 5 = 50
+student@T43:~$ ./multi.sh
+enter a number
+7
+1 * 7 = 7
+2 * 7 = 14
+3 * 7 = 21
+4 * 7 = 28
+5 * 7 = 35
+6 * 7 = 42
+7 * 7 = 49
+8 * 7 = 56
+9 * 7 = 63
+10 * 7 = 70
+student@T43:~$ gedit prime.sh
+student@T43:~$ chmod +x prime.sh
+student@T43:~$ ./prime.sh
+enter a number
+8
+./prime.sh: line 3: 8: command not found
+
+student@T43:~$ ./prime.sh
+enter a number
+4
+2
+student@T43:~$ chmod +x prime.sh
+student@T43:~$ ./prime.sh
+enter a number
+8
+./prime.sh: line 5: syntax error near unexpected token `b='
+./prime.sh: line 5: `b= $(($p / $a ))'
+student@T43:~$ ./prime.sh
+enter a number
+8
+./prime.sh: line 6: 2: command not found
+./prime.sh: line 7: [: -eq: unary operator expected
+prime
+./prime.sh: line 6: 2: command not found
+./prime.sh: line 7: [: -eq: unary operator expected
+prime
+./prime.sh: line 6: 2: command not found
+./prime.sh: line 7: [: -eq: unary operator expected
+prime
+./prime.sh: line 6: 2: command not found
+./prime.sh: line 7: [: -eq: unary operator expected
+prime
+student@T43:~$ ./prime.sh
+enter a number
+9
+./prime.sh: line 6: 9 / 4 -ne 0 : syntax error in expression (error token is "0 ")
+student@T43:~$ chmod +x prime.sh
+student@T43:~$ ./prime.sh
+enter a number
+5
+./prime.sh: line 6: 5 % 2 -ne 0 : syntax error in expression (error token is "0 ")
+student@T43:~$ ./prime.sh
+enter a number
+5
+./prime.sh: line 6: 5 % 2 -ne 0 : syntax error in expression (error token is "0 ")
+student@T43:~$ 
+

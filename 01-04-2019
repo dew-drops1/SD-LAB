@@ -1,0 +1,25 @@
+Terminal-1
+
+student@T43:~$ javac MultiClient.java
+student@T43:~$ gedit MultiClient.java
+student@T43:~$ javac MultiClient.java
+student@T43:~$ java MultiClient
+Client connected to the server
+to Start the chat, type message and press Enter key
+haiiiii
+server:>heloooo
+
+
+Terminal-2
+
+student@T43:~$ gedit server.java
+student@T43:~$ gedit client.java
+
+(gedit:3375): Gtk-WARNING **: 12:01:51.013: Failed to measure available space: The specified location is not supported
+student@T43:~$ javac MultiServer.java
+student@T43:~$ java MultiServer
+waiting for client.........
+client connected 
+client:>haiiiii
+heloooo
+

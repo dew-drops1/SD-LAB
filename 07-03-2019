@@ -1,0 +1,316 @@
+student@T43:~$ cd mca
+student@T43:~/mca$ ls
+f3.txt  file1.txt  lmca  rmca
+student@T43:~/mca$ cd rmca
+student@T43:~/mca/rmca$ ls
+a  c2.txt  f4.txt  file2.txt  n1.txt  n2.txt
+student@T43:~/mca/rmca$ cd ..
+student@T43:~/mca$ cd lmca
+student@T43:~/mca/lmca$ ls
+a       ab.txt~  c1      c2.4    c5.txt  c7.txt  f3.txt     l1.txt  l3.txt
+ab.txt  b.txt    c1.txt  c3.txt  c6.txt  cb.txt  file3.txt  l2.txt  new
+student@T43:~/mca/lmca$ cd new
+student@T43:~/mca/lmca/new$ ls
+c2.txt  c5.txt  d1  f114.txt  f142.txt  f14.txt  f1.txt  f2.txt  f3.txt
+student@T43:~/mca/lmca/new$ cd d1
+student@T43:~/mca/lmca/new/d1$ ls
+student@T43:~/mca/lmca/new/d1$ cd ..
+student@T43:~/mca/lmca/new$ cd ..
+student@T43:~/mca/lmca$ cd..
+cd..: command not found
+student@T43:~/mca/lmca$ cd ..
+student@T43:~/mca$ cd rmca
+student@T43:~/mca/rmca$ ls
+a  c2.txt  f4.txt  file2.txt  n1.txt  n2.txt
+student@T43:~/mca/rmca$ cd a
+student@T43:~/mca/rmca/a$ ls
+ab.txt   c2.4     cb.txt     f2.txt  f5.txt      r1.txt   st3.txt
+ab.txt~  c2.txt~  digit.txt  f3.txt  f6.txt      r.txt    states.txt
+c1       c3.txt   f1.txt     f4.txt  number.txt  st1.txt  st.txt
+student@T43:~/mca/rmca/a$ cd c1
+student@T43:~/mca/rmca/a/c1$ ls
+ad.txt  c1.txt  kerala.txt  n3.txt  new.exc.odt  new.txt  ub.txt  u.txt
+student@T43:~/mca/rmca/a/c1$ head kerala.txt
+Kerala (/ˈkɛrələ/) is a state on the southwestern, Malabar Coast of India. It was formed on 1 November 1956, following passage of the States Reorganisation Act, by combining Malayalam-speaking regions. Spread over 38,863 km2 (15,005 sq mi), Kerala is the twenty second largest Indian state by area. It is bordered by Karnataka to the north and northeast, Tamil Nadu to the east and south, and the Lakshadweep Sea and Arabian Sea to the west. With 33,387,677 inhabitants as per the 2011 Census, Kerala is the thirteenth-largest Indian state by population. It is divided into 14 districts with the capital being Thiruvananthapuram. Malayalam is the most widely spoken language and is also the official language of the state.[9]
+
+The Chera Dynasty was the first prominent kingdom based in Kerala. The Ay kingdom in the deep south and the Ezhimala kingdom in the north formed the other kingdoms in the early years of the Common Era (CE or AD). The region had been a prominent spice exporter since 3000 BCE. The region's prominence in trade was noted in the works of Pliny as well as the Periplus around 100 CE. In the 15th century, the spice trade attracted Portuguese traders to Kerala, and paved the way for European colonisation of India. At the time of Indian independence movement in the early 20th century, there were two major princely states in Kerala-Travancore State and the Kingdom of Cochin. They united to form the state of Thiru-Kochi in 1949. The Malabar region, in the northern part of Kerala had been a part of the Madras province of British India, which later became a part of the Madras State post-independence. After the States Reorganisation Act, 1956, the modern-day state of Kerala was formed by merging the Malabar district of Madras State (excluding Gudalur taluk of Nilgiris district, Topslip, the Attappadi Forest east of Anakatti), the state of Thiru-Kochi (excluding four southern taluks of Kanyakumari district, Shenkottai and Tenkasi taluks), and the taluk of Kasaragod (now Kasaragod District) in South Canara (Tulunad) which was a part of Madras State.
+
+The economy of Kerala is the 12th-largest state economy in India with ₹7.73 lakh crore (US$110 billion) in gross domestic product and a per capita GDP of ₹163,000 (US$2,300).[3][4] Kerala has the lowest positive population growth rate in India, 3.44%; the highest Human Development Index (HDI), 0.712 in 2015; the highest literacy rate, 93.91% in the 2011 census; the highest life expectancy, 77 years; and the highest sex ratio, 1,084 women per 1,000 men. The state has witnessed significant emigration, especially to Arab states of the Persian Gulf during the Gulf Boom of the 1970s and early 1980s, and its economy depends significantly on remittances from a large Malayali expatriate community. Hinduism is practised by more than half of the population, followed by Islam and Christianity. The culture is a synthesis of Aryan, Dravidian, Arab, and European cultures,[10] developed over millennia, under influences from other parts of India and abroad.
+
+The production of pepper and natural rubber contributes significantly to the total national output. In the agricultural sector, coconut, tea, coffee, cashew and spices are important. The state's coastline extends for 595 kilometres (370 mi), and around 1.1 million people in the state are dependent on the fishery industry which contributes 3% to the state's income. The state has the highest media exposure in India with newspapers publishing in nine languages, mainly English and Malayalam. Kerala is one of the prominent tourist destinations of India, with backwaters, hill stations, beaches, Ayurvedic tourism and tropical greenery as its major attractions. 
+student@T43:~/mca/rmca/a/c1$ head -n kerala.txt
+head: invalid number of lines: ‘kerala.txt’
+student@T43:~/mca/rmca/a/c1$ head -n 3 kerala.txt
+Kerala (/ˈkɛrələ/) is a state on the southwestern, Malabar Coast of India. It was formed on 1 November 1956, following passage of the States Reorganisation Act, by combining Malayalam-speaking regions. Spread over 38,863 km2 (15,005 sq mi), Kerala is the twenty second largest Indian state by area. It is bordered by Karnataka to the north and northeast, Tamil Nadu to the east and south, and the Lakshadweep Sea and Arabian Sea to the west. With 33,387,677 inhabitants as per the 2011 Census, Kerala is the thirteenth-largest Indian state by population. It is divided into 14 districts with the capital being Thiruvananthapuram. Malayalam is the most widely spoken language and is also the official language of the state.[9]
+
+The Chera Dynasty was the first prominent kingdom based in Kerala. The Ay kingdom in the deep south and the Ezhimala kingdom in the north formed the other kingdoms in the early years of the Common Era (CE or AD). The region had been a prominent spice exporter since 3000 BCE. The region's prominence in trade was noted in the works of Pliny as well as the Periplus around 100 CE. In the 15th century, the spice trade attracted Portuguese traders to Kerala, and paved the way for European colonisation of India. At the time of Indian independence movement in the early 20th century, there were two major princely states in Kerala-Travancore State and the Kingdom of Cochin. They united to form the state of Thiru-Kochi in 1949. The Malabar region, in the northern part of Kerala had been a part of the Madras province of British India, which later became a part of the Madras State post-independence. After the States Reorganisation Act, 1956, the modern-day state of Kerala was formed by merging the Malabar district of Madras State (excluding Gudalur taluk of Nilgiris district, Topslip, the Attappadi Forest east of Anakatti), the state of Thiru-Kochi (excluding four southern taluks of Kanyakumari district, Shenkottai and Tenkasi taluks), and the taluk of Kasaragod (now Kasaragod District) in South Canara (Tulunad) which was a part of Madras State.
+student@T43:~/mca/rmca/a/c1$ head -n 1 kerala.txt
+Kerala (/ˈkɛrələ/) is a state on the southwestern, Malabar Coast of India. It was formed on 1 November 1956, following passage of the States Reorganisation Act, by combining Malayalam-speaking regions. Spread over 38,863 km2 (15,005 sq mi), Kerala is the twenty second largest Indian state by area. It is bordered by Karnataka to the north and northeast, Tamil Nadu to the east and south, and the Lakshadweep Sea and Arabian Sea to the west. With 33,387,677 inhabitants as per the 2011 Census, Kerala is the thirteenth-largest Indian state by population. It is divided into 14 districts with the capital being Thiruvananthapuram. Malayalam is the most widely spoken language and is also the official language of the state.[9]
+student@T43:~/mca/rmca/a/c1$ head -c 4 kerala.txt
+Kerastudent@T43:~/mca/rmca/a/c1$ cd ..
+student@T43:~/mca/rmca/a$ ls
+ab.txt   c2.4     cb.txt     f2.txt  f5.txt  number.txt  st1.txt     st.txt
+ab.txt~  c2.txt~  digit.txt  f3.txt  f6.txt  r1.txt      st3.txt
+c1       c3.txt   f1.txt     f4.txt  g.txt   r.txt       states.txt
+student@T43:~/mca/rmca/a$ grep commands g.txt
+The grep command which stands for “global regular expression print,” processes text line by line and prints any lines which match a specified pattern. The grep command is used to search text or searches the given file for lines containing a match to the given strings or words. By default, grep displays the matching lines. Use grep to search for lines of text that match one or many regular expressions, and outputs only the matching lines. Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems. grep is a powerful file pattern searcher in Linux. If it is not installed on your system, you can easily install it via your package manager (apt-get on Debian/Ubuntu and yum on RHEL/CentOS/Fedora). For installing grep in your system, please use the following command.
+student@T43:~/mca/rmca/a$ grep -c commands g.txt
+1
+student@T43:~/mca/rmca/a$ grep -c following g.txt
+1
+student@T43:~/mca/rmca/a$ grep -c linux g.txt
+0
+student@T43:~/mca/rmca/a$ grep -c match g.txt
+1
+student@T43:~/mca/rmca/a$ grep -c 'match' g.txt
+1
+student@T43:~/mca/rmca/a$ grep -c "match" g.txt
+1
+student@T43:~/mca/rmca/a$ grep -c "output" g.txt
+1
+student@T43:~/mca/rmca/a$ grep -c "output" g.txt
+1
+student@T43:~/mca/rmca/a$ grep -n "output" g.txt
+1:The grep command which stands for “global regular expression print,” processes text line by line and prints any lines which match a specified pattern. The grep command is used to search text or searches the given file for lines containing a match to the given strings or words. By default, grep displays the matching lines. Use grep to search for lines of text that match one or many regular expressions, and outputs only the matching lines. Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems. grep is a powerful file pattern searcher in Linux. If it is not installed on your system, you can easily install it via your package manager (apt-get on Debian/Ubuntu and yum on RHEL/CentOS/Fedora). For installing grep in your system, please use the following command.
+student@T43:~/mca/rmca/a$ grep -n "one" g.txt
+1:The grep command which stands for “global regular expression print,” processes text line by line and prints any lines which match a specified pattern. The grep command is used to search text or searches the given file for lines containing a match to the given strings or words. By default, grep displays the matching lines. Use grep to search for lines of text that match one or many regular expressions, and outputs only the matching lines. Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems. grep is a powerful file pattern searcher in Linux. If it is not installed on your system, you can easily install it via your package manager (apt-get on Debian/Ubuntu and yum on RHEL/CentOS/Fedora). For installing grep in your system, please use the following command.
+student@T43:~/mca/rmca/a$ grep -n "one" g.txt
+3: Use grep to search for lines of text that match one or many regular expressions, and outputs only the matching lines. 
+4:Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems. grep is a powerful file pattern searcher in Linux. If it is not installed on your system, you can easily install it via your package manager (apt-get on Debian/Ubuntu and yum on RHEL/CentOS/Fedora).
+student@T43:~/mca/rmca/a$ grep -i "ONe" g.txt
+ Use grep to search for lines of text that match one or many regular expressions, and outputs only the matching lines. 
+Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems. grep is a powerful file pattern searcher in Linux. If it is not installed on your system, you can easily install it via your package manager (apt-get on Debian/Ubuntu and yum on RHEL/CentOS/Fedora).
+student@T43:~/mca/rmca/a$ grep -n "ONe" g.txt
+student@T43:~/mca/rmca/a$ grep -n "one" g.txt
+3: Use grep to search for lines of text that match one or many regular expressions, and outputs only the matching lines. 
+4:Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems. grep is a powerful file pattern searcher in Linux. If it is not installed on your system, you can easily install it via your package manager (apt-get on Debian/Ubuntu and yum on RHEL/CentOS/Fedora).
+student@T43:~/mca/rmca/a$ grep -v "or" g.txt
+ By default, grep displays the matching lines.
+
+student@T43:~/mca/rmca/a$ grep -w "powerful" g.txt
+Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems. grep is a powerful file pattern searcher in Linux. If it is not installed on your system, you can easily install it via your package manager (apt-get on Debian/Ubuntu and yum on RHEL/CentOS/Fedora).
+student@T43:~/mca/rmca/a$ grep -w "tintu" g.txt
+Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems. grep is a powerful file pattern searcher in Linux. If it is not installed on your system, you can easily install it via your package manager (apt-get on Debian/Ubuntu tintu and yum on RHEL/CentOS/Fedora).
+student@T43:~/mca/rmca/a$ grep  "tintu" g.txt
+ Use grep to search for lines of text that match one or many regular expressions, and outputs only the matching tintukl lines. 
+Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems. grep is a powerful file pattern searcher in Linux. If it is not installed on your system, you can easily install it via your package manager (apt-get on Debian/Ubuntu tintu and yum on RHEL/CentOS/Fedora).
+student@T43:~/mca/rmca/a$ grep -c  "tintu" g.txt
+2
+student@T43:~/mca/rmca/a$ grep -c  "powerful" g.txt
+1
+student@T43:~/mca/rmca/a$ grep -c  "via" g.txt
+1
+student@T43:~/mca/rmca/a$ grep -c  "yum" g.txt
+1
+student@T43:~/mca/rmca/a$ grep -c  "or" g.txt
+4
+student@T43:~/mca/rmca/a$ grep -o  "or" g.txt
+or
+or
+or
+or
+or
+or
+or
+or
+or
+student@T43:~/mca/rmca/a$ grep -o  "tintu" g.txt
+tintu
+tintu
+student@T43:~/mca/rmca/a$ grep -B2  "tintu" g.txt
+The grep command which stands for “global regular expression print,” processes text line by line and prints any lines which match a specified pattern. The grep command is used to search text or searches the given file for lines containing a match to the given strings or words.
+ By default, grep displays the matching lines.
+ Use grep to search for lines of text that match one or many regular expressions, and outputs only the matching tintukl lines. 
+Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems. grep is a powerful file pattern searcher in Linux. If it is not installed on your system, you can easily install it via your package manager (apt-get on Debian/Ubuntu tintu and yum on RHEL/CentOS/Fedora).
+student@T43:~/mca/rmca/a$ grep -B2  "tintu" g.txt
+The grep command is used to search text or searches the given file for lines containing a match to the given strings or words.
+ By default, grep displays the matching lines.
+ Use grep to search for lines of text that match one or many regular expressions, and outputs only the matching tintukl lines. 
+Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems. grep is a powerful file pattern searcher in Linux. If it is not installed on your system, you can easily install it via your package manager (apt-get on Debian/Ubuntu tintu and yum on RHEL/CentOS/Fedora).
+student@T43:~/mca/rmca/a$ grep -A2  "tintu" g.txt
+ Use grep to search for lines of text that match one or many regular expressions, and outputs only the matching tintukl lines. 
+Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems. grep is a powerful file pattern searcher in Linux. If it is not installed on your system, you can easily install it via your package manager (apt-get on Debian/Ubuntu tintu and yum on RHEL/CentOS/Fedora).
+ For installing grep in your system, please use the following command.
+
+student@T43:~/mca/rmca/a$ grep -v  "tintu" g.txt
+The grep command which stands for “global regular expression print,” processes text line by line and prints any lines which match a specified pattern. 
+The grep command is used to search text or searches the given file for lines containing a match to the given strings or words.
+ By default, grep displays the matching lines.
+ For installing grep in your system, please use the following command.
+
+student@T43:~/mca/rmca/a$ grep -v  "^tintu" g.txt
+The grep command which stands for “global regular expression print,” processes text line by line and prints any lines which match a specified pattern. 
+The grep command is used to search text or searches the given file for lines containing a match to the given strings or words.
+ By default, grep displays the matching lines.
+ Use grep to search for lines of text that match one or many regular expressions, and outputs only the matching tintukl lines. 
+Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems. grep is a powerful file pattern searcher in Linux. If it is not installed on your system, you can easily install it via your package manager (apt-get on Debian/Ubuntu tintu and yum on RHEL/CentOS/Fedora).
+ For installing grep in your system, please use the following command.
+
+student@T43:~/mca/rmca/a$ grep -v  "^following" g.txt
+The grep command which stands for “global regular expression print,” processes text line by line and prints any lines which match a specified pattern. 
+The grep command is used to search text or searches the given file for lines containing a match to the given strings or words.
+ By default, grep displays the matching lines.
+ Use grep to search for lines of text that match one or many regular expressions, and outputs only the matching tintukl lines. 
+Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems. grep is a powerful file pattern searcher in Linux. If it is not installed on your system, you can easily install it via your package manager (apt-get on Debian/Ubuntu tintu and yum on RHEL/CentOS/Fedora).
+ For installing grep in your system, please use the following command.
+
+student@T43:~/mca/rmca/a$ grep -v  "^By" g.txt
+The grep command which stands for “global regular expression print,” processes text line by line and prints any lines which match a specified pattern. 
+The grep command is used to search text or searches the given file for lines containing a match to the given strings or words.
+ By default, grep displays the matching lines.
+ Use grep to search for lines of text that match one or many regular expressions, and outputs only the matching tintukl lines. 
+Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems. grep is a powerful file pattern searcher in Linux. If it is not installed on your system, you can easily install it via your package manager (apt-get on Debian/Ubuntu tintu and yum on RHEL/CentOS/Fedora).
+ For installing grep in your system, please use the following command.
+
+student@T43:~/mca/rmca/a$ grep   "^By" g.txt
+student@T43:~/mca/rmca/a$ grep "^By" g.txt
+student@T43:~/mca/rmca/a$ grep "^The" g.txt
+The grep command which stands for “global regular expression print,” processes text line by line and prints any lines which match a specified pattern. 
+The grep command is used to search text or searches the given file for lines containing a match to the given strings or words.
+student@T43:~/mca/rmca/a$ grep "^Use" g.txt
+Use grep to search for lines of text that match one or many regular expressions, and outputs only the matching tintukl lines. 
+student@T43:~/mca/rmca/a$ grep "and$" g.txt
+student@T43:~/mca/rmca/a$ grep "command$" g.txt
+student@T43:~/mca/rmca/a$ grep "command$." g.txt
+student@T43:~/mca/rmca/a$ grep  "command$" g.txt
+student@T43:~/mca/rmca/a$ grep  "command.$" g.txt
+ For installing grep in your system, please use the following command.
+student@T43:~/mca/rmca/a$ grep -h "command" g.txt
+The grep command which stands for “global regular expression print,” processes text line by line and prints any lines which match a specified pattern. 
+The grep command is used to search text or searches the given file for lines containing a match to the given strings or words.
+Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems.
+For installing grep in your system, please use the following command.
+student@T43:~/mca/rmca/a$ grep -l "command" g.txt
+g.txt
+student@T43:~/mca/rmca/a$ grep -l "the" g.txt
+g.txt
+student@T43:~/mca/rmca/a$ grep -n "system" g.txt
+8:Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems.
+10:grep is a powerful file pattern searcher in Linux. If it is not installed on your system, you can easily install it via your package manager (apt-get on Debian/Ubuntu tintu and yum on RHEL/CentOS/Fedora).
+12:For installing grep in your system, please use the following command.
+student@T43:~/mca/rmca/a$ grep  "system" g.txt
+Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems.
+grep is a powerful file pattern searcher in Linux. If it is not installed on your system, you can easily install it via your package manager (apt-get on Debian/Ubuntu tintu and yum on RHEL/CentOS/Fedora).
+For installing grep in your system, please use the following command.
+student@T43:~/mca/rmca/a$ ls
+ab.txt   c2.4     cb.txt     f2.txt  f5.txt  number.txt  st1.txt     st.txt
+ab.txt~  c2.txt~  digit.txt  f3.txt  f6.txt  r1.txt      st3.txt
+c1       c3.txt   f1.txt     f4.txt  g.txt   r.txt       states.txt
+student@T43:~/mca/rmca/a$ cat > g1.txt
+the unix system is.
+the basic command in linux.
+grep "the" g1.txt g.txt
+
+^[[A^[[A^[[A^C
+student@T43:~/mca/rmca/a$ grep  "the" g.txt g1.txt
+g.txt:The grep command is used to search text or searches the given file for lines containing a match to the given strings or words.
+g.txt:By default, grep displays the matching lines.
+g.txt:Use grep to search for lines of text that match one or many regular expressions, and outputs only the matching tintukl lines.
+g.txt:Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems.
+g.txt:For installing grep in your system, please use the following command.
+g1.txt:the unix system is.
+g1.txt:the basic command in linux.
+g1.txt:grep "the" g1.txt g.txt
+student@T43:~/mca/rmca/a$ grep  "basic" g.txt 
+student@T43:~/mca/rmca/a$ grep "basic" g.txt 
+student@T43:~/mca/rmca/a$ grep "basic" g1.txt 
+the basic command in linux.
+student@T43:~/mca/rmca/a$ grep "the" g1.txt 
+the unix system is.
+the basic command in linux.
+grep "the" g1.txt g.txt
+student@T43:~/mca/rmca/a$ grep -n "The" g1.txt 
+student@T43:~/mca/rmca/a$ grep -c "the" g1.txt 
+3
+student@T43:~/mca/rmca/a$ grep -c "the" g1.txt 
+3
+student@T43:~/mca/rmca/a$ grep -i "LINUX" g1.txt 
+the basic command in linux.
+student@T43:~/mca/rmca/a$ egrep -w 'linux|basic' g1.txt 
+the basic command in linux.
+student@T43:~/mca/rmca/a$ ls
+ab.txt   c2.4     cb.txt     f2.txt  f5.txt  g.txt       r.txt    states.txt
+ab.txt~  c2.txt~  digit.txt  f3.txt  f6.txt  number.txt  st1.txt  st.txt
+c1       c3.txt   f1.txt     f4.txt  g1.txt  r1.txt      st3.txt
+student@T43:~/mca/rmca/a$ cat digit.txt
+1
+2
+3
+4
+5
+6
+7
+
+8
+9
+1
+10
+11
+12
+13
+14
+15
+1
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+29
+student@T43:~/mca/rmca/a$ ls
+ab.txt   c2.4     cb.txt     f2.txt  f5.txt  g.txt       r.txt    states.txt
+ab.txt~  c2.txt~  digit.txt  f3.txt  f6.txt  number.txt  st1.txt  st.txt
+c1       c3.txt   f1.txt     f4.txt  g1.txt  r1.txt      st3.txt
+student@T43:~/mca/rmca/a$ cat f6.txt
+123adskhf458
+7895 ghjy 638tyui
+89654 hjkl iopm 123456acvxrt
+avcdrtuipkl
+123789 kl
+4567891423 567ghjjcvnb
+student@T43:~/mca/rmca/a$ cat ab.txt
+1
+2
+student@T43:~/mca/rmca/a$ cat g.txt
+The grep command which stands for “global regular expression print,” processes text line by line and prints any lines which match a specified pattern. 
+
+The grep command is used to search text or searches the given file for lines containing a match to the given strings or words.
+
+By default, grep displays the matching lines.
+Use grep to search for lines of text that match one or many regular expressions, and outputs only the matching tintukl lines.
+ 
+Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems.
+
+grep is a powerful file pattern searcher in Linux. If it is not installed on your system, you can easily install it via your package manager (apt-get on Debian/Ubuntu tintu and yum on RHEL/CentOS/Fedora).
+
+For installing grep in your system, please use the following command.
+
+student@T43:~/mca/rmca/a$ grep -i -n "the" *
+grep: c1: Is a directory
+g1.txt:1:the unix system is.
+g1.txt:2:the basic command in linux.
+g1.txt:3:grep "the" g1.txt g.txt
+g.txt:1:The grep command which stands for “global regular expression print,” processes text line by line and prints any lines which match a specified pattern. 
+g.txt:3:The grep command is used to search text or searches the given file for lines containing a match to the given strings or words.
+g.txt:5:By default, grep displays the matching lines.
+g.txt:6:Use grep to search for lines of text that match one or many regular expressions, and outputs only the matching tintukl lines.
+g.txt:8:Grep is considered to be one of the most useful commands on Linux and Unix-like operating systems.
+g.txt:12:For installing grep in your system, please use the following command.
+grep: st1.txt: Is a directory
+grep: st3.txt: Is a directory
+student@T43:~/mca/rmca/a$ grep -i -l "the" *
+grep: c1: Is a directory
+g1.txt
+g.txt
+grep: st1.txt: Is a directory
+grep: st3.txt: Is a directory
+student@T43:~/mca/rmca/a$ grep -c "the" g1.txt
+3
+student@T43:~/mca/rmca/a$ 
+

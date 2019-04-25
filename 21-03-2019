@@ -1,0 +1,102 @@
+student@T43:~$ vi tintu.sh
+student@T43:~$ chmod +x tintu.sh
+student@T43:~$ ./tintu.sh
+hello
+student@T43:~$ gedit sample.sh
+student@T43:~$ chmod +x sample.sh
+student@T43:~$ ./sample.sh
+hello world...
+student@T43:~$ vi tintu.sh
+student@T43:~$ gedit sample.sh
+chmod +x sample.sh
+./sample.sh
+vi teststudent@T43:~$ chmod +x sample.sh
+student@T43:~$ ./sample.sh
+value of var is test string
+student@T43:~$ chmod +x sample.sh
+student@T43:~$ ./sample.sh
+value of var is test string
+student@T43:~$ gedit sample.sh
+student@T43:~$ chmod +x sample.sh
+student@T43:~$ ./sample.sh
+value of var is $var
+student@T43:~$ gedit test.sh
+student@T43:~$ chmod +x test.sh
+student@T43:~$ ./test.sh a b c
+the command is ./test.sh
+the first argument is a
+the  second argument is b
+the  third argument is c
+student@T43:~$ gedit test.sh
+student@T43:~$ chmod +x test.sh
+student@T43:~$ ./test.sh
+the command is ./test.sh
+the first argument is 
+the  second argument is 
+the  third argument is 
+0
+
+
+student@T43:~$ gedit test.sh
+student@T43:~$ chmod +x test.sh
+student@T43:~$ ./test.sh a b c
+the command is ./test.sh
+the first argument is a
+the  second argument is b
+the  third argument is c
+3
+a b c
+a b c
+student@T43:~$ gedit test2.sh
+student@T43:~$ chmod +x test2.sh
+student@T43:~$ ./test2.sh
+
+
+student@T43:~$ gedit test2.sh
+student@T43:~$ ./test.sh
+the command is ./test.sh
+the first argument is 
+the  second argument is 
+the  third argument is 
+0
+
+
+student@T43:~$ ./test2.sh
+
+student@T43:~$ gedit file1.sh
+student@T43:~$ chmod +x file1.sh
+student@T43:~$ ./file.sh
+bash: ./file.sh: No such file or directory
+student@T43:~$ ./file1.sh
+5+10=15
+student@T43:~$ gedit file1.sh
+chmod +x file1.sh
+./file1.sh
+4
+chstudent@T43:~$ chmod +x file1.sh
+student@T43:~$ ./file1.sh
+5+10=15
+enter two numbers:x5+4=9
+student@T43:~$ chmod +x file1.sh
+student@T43:~$ ./file1.sh
+5+10=15
+enter two numbers:x7
+5+7=12
+student@T43:~$ 8
+8: command not found
+student@T43:~$ ./file1.sh
+5+10=15
+enter two numbers:x4 5     
+./file1.sh: line 7: 4 5: syntax error in expression (error token is "5")
+5+4 5=15
+student@T43:~$ gedit file1.sh
+student@T43:~$ ./file1.sh
+5+10=15
+enter two numbers:45 8
+45+8=53
+student@T43:~$ gedit file2.sh
+chmod +x file2.shstudent@T43:~$ chmod +x file2.sh
+student@T43:~$ ./file2.sh
+sum is 35
+student@T43:~$ 
+

@@ -1,0 +1,127 @@
+student@T43:~$ cd mca
+student@T43:~/mca$ cd rmca
+student@T43:~/mca/rmca$ ls
+a  c2.txt  f4.txt  file2.txt
+student@T43:~/mca/rmca$ cd ..
+student@T43:~/mca$ cd lmca
+student@T43:~/mca/lmca$ ls
+a       ab.txt~  c1.txt  c2.txt   c3.txt  c6.txt  cb.txt  file3.txt
+ab.txt  c1       c2.4    c2.txt~  c5.txt  c7.txt  f3.txt  new
+student@T43:~/mca/lmca$ cd new
+student@T43:~/mca/lmca/new$ ls
+d1  f142.txt  f14.txt  f1.txt  f2.txt  f3.txt
+student@T43:~/mca/lmca/new$ cd ..
+student@T43:~/mca/lmca$ ls
+a       ab.txt~  c1.txt  c2.txt   c3.txt  c6.txt  cb.txt  file3.txt
+ab.txt  c1       c2.4    c2.txt~  c5.txt  c7.txt  f3.txt  new
+student@T43:~/mca/lmca$ cat c2.txt
+abcdsfgyuiiiuji
+student@T43:~/mca/lmca$ cat c3.txt
+1
+2
+student@T43:~/mca/lmca$ cat -L c2.txt c3.txt   
+cat: invalid option -- 'L'
+Try 'cat --help' for more information.
+student@T43:~/mca/lmca$ man cat
+student@T43:~/mca/lmca$ cat -tac c3.txt
+cat: invalid option -- 'a'
+Try 'cat --help' for more information.
+student@T43:~/mca/lmca$ cat tac c3.txt
+cat: tac: No such file or directory
+1
+2
+student@T43:~/mca/lmca$ tac c3.txt
+2
+1
+student@T43:~/mca/lmca$ ls
+a       ab.txt~  c1.txt  c2.txt   c3.txt  c6.txt  cb.txt  file3.txt
+ab.txt  c1       c2.4    c2.txt~  c5.txt  c7.txt  f3.txt  new
+student@T43:~/mca/lmca$ cp c2.txt c5.txt new
+student@T43:~/mca/lmca$ cd new
+student@T43:~/mca/lmca/new$ ls
+c2.txt  c5.txt  d1  f142.txt  f14.txt  f1.txt  f2.txt  f3.txt
+student@T43:~/mca/lmca/new$ man mv
+student@T43:~/mca/lmca/new$ mv -z c2.txt k1.txt
+mv: invalid option -- 'z'
+Try 'mv --help' for more information.
+student@T43:~/mca/lmca/new$ cp -l f1.txt f114.txt
+student@T43:~/mca/lmca/new$ cd ..
+student@T43:~/mca/lmca$ ls
+a       ab.txt~  c1.txt  c2.txt   c3.txt  c6.txt  cb.txt  file3.txt
+ab.txt  c1       c2.4    c2.txt~  c5.txt  c7.txt  f3.txt  new
+student@T43:~/mca/lmca$ cat c2.txt
+abcdsfgyuiiiuji
+student@T43:~/mca/lmca$ rm c2.txt
+student@T43:~/mca/lmca$ ls
+a       ab.txt~  c1.txt  c2.txt~  c5.txt  c7.txt  f3.txt     new
+ab.txt  c1       c2.4    c3.txt   c6.txt  cb.txt  file3.txt
+student@T43:~/mca/lmca$ cd a
+student@T43:~/mca/lmca/a$ ls
+ab.txt  ab.txt~  c1  c1.txt  c2.4  c2.txt  c2.txt~  c3.txt  cb.txt
+student@T43:~/mca/lmca/a$ cd c1
+student@T43:~/mca/lmca/a/c1$ ls
+c1.txt
+student@T43:~/mca/lmca/a/c1$ rm -r c1
+rm: cannot remove 'c1': No such file or directory
+student@T43:~/mca/lmca/a/c1$ cd ..
+student@T43:~/mca/lmca/a$ rm -r c1
+student@T43:~/mca/lmca/a$ ls
+ab.txt  ab.txt~  c1.txt  c2.4  c2.txt  c2.txt~  c3.txt  cb.txt
+student@T43:~/mca/lmca/a$ cd ..
+student@T43:~/mca/lmca$ cat > l1.txt
+10
+20
+30
+^C
+student@T43:~/mca/lmca$ cat >l2.txt
+40
+50
+^C
+student@T43:~/mca/lmca$ cp -l l2.txt l1.txt
+cp: cannot create hard link 'l1.txt' to 'l2.txt': File exists
+student@T43:~/mca/lmca$ cat l1.txt
+10
+20
+30
+student@T43:~/mca/lmca$ cp -l l2.txt l3.txt
+student@T43:~/mca/lmca$ cat c3.txt
+1
+2
+student@T43:~/mca/lmca$ cat l3.txt
+40
+50
+student@T43:~/mca/lmca$ man rm
+student@T43:~/mca/lmca$ man rm
+student@T43:~/mca/lmca$ ls
+a       ab.txt~  c1.txt  c2.txt~  c5.txt  c7.txt  f3.txt     l1.txt  l3.txt
+ab.txt  c1       c2.4    c3.txt   c6.txt  cb.txt  file3.txt  l2.txt  new
+student@T43:~/mca/lmca$ rm -f c2.txt
+student@T43:~/mca/lmca$ ls
+a       ab.txt~  c1.txt  c2.txt~  c5.txt  c7.txt  f3.txt     l1.txt  l3.txt
+ab.txt  c1       c2.4    c3.txt   c6.txt  cb.txt  file3.txt  l2.txt  new
+student@T43:~/mca/lmca$ rm -f c2.txt~
+student@T43:~/mca/lmca$ ls
+a       ab.txt~  c1.txt  c3.txt  c6.txt  cb.txt  file3.txt  l2.txt  new
+ab.txt  c1       c2.4    c5.txt  c7.txt  f3.txt  l1.txt     l3.txt
+student@T43:~/mca/lmca$ rm -i c6.txt
+rm: remove regular empty file 'c6.txt'? n
+student@T43:~/mca/lmca$ man rm
+student@T43:~/mca/lmca$ cat c7.txt
+1
+2
+student@T43:~/mca/lmca$ rm -l c7.txt
+rm: invalid option -- 'l'
+Try 'rm --help' for more information.
+student@T43:~/mca/lmca$ rm -I c7.txt
+rm: remove write-protected regular file 'c7.txt'? N
+student@T43:~/mca/lmca$ cd c1
+student@T43:~/mca/lmca/c1$ mkdir rm
+student@T43:~/mca/lmca/c1$ rm -d rm
+student@T43:~/mca/lmca/c1$ ls
+c1.txt
+student@T43:~/mca/lmca/c1$ mkdir rm
+student@T43:~/mca/lmca/c1$ rm -d
+rm: missing operand
+Try 'rm --help' for more information.
+student@T43:~/mca/lmca/c1$ 
+

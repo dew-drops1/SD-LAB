@@ -1,0 +1,74 @@
+student@U41:~$ cd tintugit
+student@U41:~/tintugit$ git init dream
+Initialized empty Git repository in /home/student/tintugit/dream/.git/
+student@U41:~/tintugit$ cd dream
+student@U41:~/tintugit/dream$ git add sample.txt
+student@U41:~/tintugit/dream$ git config user.name "dew-drops1"
+student@U41:~/tintugit/dream$ git config user.email "tintukl@mca.ajce.in"
+student@U41:~/tintugit/dream$ git commit -m "first program"
+[master (root-commit) 5c71a59] first program
+ 1 file changed, 6 insertions(+)
+ create mode 100644 sample.txt
+student@U41:~/tintugit/dream$ git status
+On branch master
+nothing to commit, working tree clean
+student@U41:~/tintugit/dream$ git remote add origin https://github.com/dew-drops1/dream
+student@U41:~/tintugit/dream$ git push origin master
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 6 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 288 bytes | 288.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/dew-drops1/dream
+ * [new branch]      master -> master
+student@U41:~/tintugit/dream$ Compressing objects: 100% (2/2), done.
+bash: syntax error near unexpected token `('
+student@U41:~/tintugit/dream$ gedit testfile.txt
+student@U41:~/tintugit/dream$ git add testfile.txt
+student@U41:~/tintugit/dream$ git config Compressing objects: 100% (2/2), done.
+bash: syntax error near unexpected token `('
+student@U41:~/tintugit/dream$ git cofig user.name "dew-drops1"
+git: 'cofig' is not a git command. See 'git --help'.
+
+The most similar command is
+	config
+student@U41:~/tintugit/dream$ git config user.name "dew-drops1"
+student@U41:~/tintugit/dream$ git config Compressing objects: 100% (2/2), done.
+bash: syntax error near unexpected token `('
+student@U41:~/tintugit/dream$ git config user.email "tintukl@mca.ajce.in"
+student@U41:~/tintugit/dream$ commit -m "trial..."
+commit: command not found
+student@U41:~/tintugit/dream$ git commit -m "trial..."
+[master 2798112] trial...
+ 1 file changed, 6 insertions(+)
+ create mode 100644 testfile.txt
+student@U41:~/tintugit/dream$ git push origin master
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 6 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 332 bytes | 332.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/dew-drops1/dream
+   5c71a59..2798112  master -> master
+student@U41:~/tintugit/dream$ git add sample.txt
+student@U41:~/tintugit/dream$ git commit -m "edited.."
+On branch master
+nothing to commit, working tree clean
+student@U41:~/tintugit/dream$ git push origin master
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+Everything up-to-date
+student@U41:~/tintugit/dream$ git clone dream
+fatal: repository 'dream' does not exist
+student@U41:~/tintugit/dream$ git branch
+* master
+student@U41:~/tintugit/dream$ git branch feature_x
+student@U41:~/tintugit/dream$ git branch
+  feature_x
+* master
+student@U41:~/tintugit/dream$ 
+

@@ -1,0 +1,323 @@
+student@T43:~$ expr 7 + 3
+10
+student@T43:~$ expr 15 /* 3
+expr: syntax error
+student@T43:~$ expr 15 \* 3
+45
+student@T43:~$ echo "enter two numbers"
+enter two numbers
+student@T43:~$ read x
+12
+student@T43:~$ read y
+30
+student@T43:~$ total='expr $x + $y`
+> echo $total
+> ^C
+student@T43:~$ echo "enter two numbers"
+enter two numbers
+student@T43:~$ read x
+read y  
+student@T43:~$ echo "enter two numbers"
+enter two numbers
+student@T43:~$ read x
+12
+student@T43:~$ read y
+15
+student@T43:~$ sum=`expr $x + $y`
+student@T43:~$ echo $total
+
+student@T43:~$ ^C
+student@T43:~$ read a
+12
+student@T43:~$ read b
+14
+student@T43:~$ sum= `$a + $b`
+12: command not found
+student@T43:~$ sum=`$a + $b`
+12: command not found
+student@T43:~$ read a
+10
+student@T43:~$ read b
+20
+student@T43:~$ sum=`expr $a + $b`
+student@T43:~$ echo "c=$sum"
+c=30
+student@T43:~$ echo "$sum"
+30
+student@T43:~$ echo $sum
+30
+student@T43:~$ read m
+16
+student@T43:~$ read n
+4
+student@T43:~$ div=`expr $m + $n`
+student@T43:~$ echo "$div"
+20
+student@T43:~$ echo " sum is $div"
+ sum is 20
+student@T43:~$ echo " sum of $m and $n is $div"
+ sum of 16 and 4 is 20
+student@T43:~$ q=10
+student@T43:~$ r=`expr $q + 1`
+student@T43:~$ echo $r
+11
+student@T43:~$ x=tintu
+student@T43:~$ len=`expr length $x`
+student@T43:~$ echo $len
+5
+student@T43:~$ echo "length of $x is $len"
+length of tintu is 5
+student@T43:~$ expr --help
+Usage: expr EXPRESSION
+  or:  expr OPTION
+
+      --help     display this help and exit
+      --version  output version information and exit
+
+Print the value of EXPRESSION to standard output.  A blank line below
+separates increasing precedence groups.  EXPRESSION may be:
+
+  ARG1 | ARG2       ARG1 if it is neither null nor 0, otherwise ARG2
+
+  ARG1 & ARG2       ARG1 if neither argument is null or 0, otherwise 0
+
+  ARG1 < ARG2       ARG1 is less than ARG2
+  ARG1 <= ARG2      ARG1 is less than or equal to ARG2
+  ARG1 = ARG2       ARG1 is equal to ARG2
+  ARG1 != ARG2      ARG1 is unequal to ARG2
+  ARG1 >= ARG2      ARG1 is greater than or equal to ARG2
+  ARG1 > ARG2       ARG1 is greater than ARG2
+
+  ARG1 + ARG2       arithmetic sum of ARG1 and ARG2
+  ARG1 - ARG2       arithmetic difference of ARG1 and ARG2
+
+  ARG1 * ARG2       arithmetic product of ARG1 and ARG2
+  ARG1 / ARG2       arithmetic quotient of ARG1 divided by ARG2
+  ARG1 % ARG2       arithmetic remainder of ARG1 divided by ARG2
+
+  STRING : REGEXP   anchored pattern match of REGEXP in STRING
+
+  match STRING REGEXP        same as STRING : REGEXP
+  substr STRING POS LENGTH   substring of STRING, POS counted from 1
+  index STRING CHARS         index in STRING where any CHARS is found, or 0
+  length STRING              length of STRING
+  + TOKEN                    interpret TOKEN as a string, even if it is a
+                               keyword like 'match' or an operator like '/'
+
+  ( EXPRESSION )             value of EXPRESSION
+
+Beware that many operators need to be escaped or quoted for shells.
+Comparisons are arithmetic if both ARGs are numbers, else lexicographical.
+Pattern matches return the string matched between \( and \) or null; if
+\( and \) are not used, they return the number of characters matched or 0.
+
+Exit status is 0 if EXPRESSION is neither null nor 0, 1 if EXPRESSION is null
+or 0, 2 if EXPRESSION is syntactically invalid, and 3 if an error occurred.
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Full documentation at: <http://www.gnu.org/software/coreutils/expr>
+or available locally via: info '(coreutils) expr invocation'
+student@T43:~$ ^C
+student@T43:~$ expr --version
+expr (GNU coreutils) 8.28
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Mike Parker, James Youngman, and Paul Eggert.
+student@T43:~$ expr anax : anamika
+0
+student@T43:~$ `expr anax : anamika`
+0: command not found
+student@T43:~$ a=anil
+student@T43:~$ b=anu
+student@T43:~$ c=`expr $a : $b`
+student@T43:~$ echo $c
+0
+student@T43:~$ a=ani
+student@T43:~$ b=ani
+student@T43:~$ c=`expr $a : $b`
+student@T43:~$ echo $c
+3
+student@T43:~$ `expr $a : $b`
+3: command not found
+student@T43:~$ `expr a : b`
+0: command not found
+student@T43:~$ `expr appu : ammu`
+0: command not found
+student@T43:~$ `expr appu : ammu`
+0: command not found
+student@T43:~$ `expr appu:ammu`
+appu:ammu: command not found
+student@T43:~$ `expr ammmu : ammu`
+0: command not found
+student@T43:~$ `expr ammu : ammu`
+4: command not found
+student@T43:~$ `expr appu : ammu`
+0: command not found
+student@T43:~$ expr anu : ani
+0
+student@T43:~$ expr anu:ani
+anu:ani
+student@T43:~$ d=`expr anu:ani`
+student@T43:~$ echo $d
+anu:ani
+student@T43:~$ d=`expr anu : ani`
+student@T43:~$ echo $d
+0
+student@T43:~$ read b
+bini
+student@T43:~$ read c
+binu
+student@T43:~$ `expr anu : ani`
+0: command not found
+student@T43:~$ `expr anu : anupama`
+0: command not found
+student@T43:~$ `expr anupama : anu`
+3: command not found
+student@T43:~$ d=`expr anupama : anu`
+student@T43:~$ echo $d
+3
+student@T43:~$ a=welcome
+student@T43:~$ d='`expr substr $a 4,7`
+> echo $d
+> a=welcome
+> ^C
+student@T43:~$ d='`expr substr $a 4,7`
+echo $d
+a=welcome
+> ^C
+student@T43:~$ c=welcome
+student@T43:~$ d=`expr substr $c 4,7
+> echo $c
+> ^C
+student@T43:~$ 
+student@T43:~$ c=welcome
+student@T43:~$ a='expr substr $c 4 7
+> echo $a
+> d='`expr substr $a 4,7`
+echo $d
+a=welcome^C
+student@T43:~$ a=welcome
+student@T43:~$ b=`expr substr $a 4 7`
+student@T43:~$ echo $b
+come
+student@T43:~$ x=malayalam
+student@T43:~$ y=`expr index $x m`
+student@T43:~$ echo $y
+1
+student@T43:~$ y=`expr index $x a`
+student@T43:~$ echo $y
+2
+student@T43:~$ y=`expr index $x y`
+student@T43:~$ echo $y
+5
+student@T43:~$ cd mca
+student@T43:~/mca$ cd rmca
+student@T43:~/mca/rmca$ ls
+a  c2.txt  f4.txt  file2.txt  n1.txt  n2.txt
+student@T43:~/mca/rmca$ tar arc.tar.gz a
+tar: You may not specify more than one '-Acdtrux', '--delete' or  '--test-label' option
+Try 'tar --help' or 'tar --usage' for more information.
+student@T43:~/mca/rmca$ man tar
+student@T43:~/mca/rmca$ tar cvf arc.tar.gz a
+a/
+a/cb.txt
+a/ab.txt~
+a/digit.txt
+a/ab.txt
+a/f6.txt
+a/r.txt
+a/states.txt
+a/number.txt
+a/st.txt
+a/c2.4
+a/g1.txt
+a/c1/
+a/c1/n3.txt
+a/c1/c1.txt
+a/c1/ad.txt
+a/c1/ub.txt
+a/c1/kerala.txt
+a/c1/new.txt
+a/c1/new.exc.odt
+a/c1/u.txt
+a/comp.tar.gz
+a/st1.txt/
+a/g.txt
+a/c3.txt
+a/c2.txt~
+a/f2.txt
+a/f3.txt
+a/f4.txt
+a/st3.txt/
+a/f1.txt
+a/f5.txt
+a/r1.txt
+student@T43:~/mca/rmca$ tar cvf arc.tar.gz 
+tar: Cowardly refusing to create an empty archive
+Try 'tar --help' or 'tar --usage' for more information.
+student@T43:~/mca/rmca$ tar  arc.tar.gz 
+tar: Old option 'g' requires an argument.
+Try 'tar --help' or 'tar --usage' for more information.
+student@T43:~/mca/rmca$ tar xvz arc.tar.gz 
+tar: Refusing to read archive contents from terminal (missing -f option?)
+tar: Error is not recoverable: exiting now
+student@T43:~/mca/rmca$ tar -xvzf arc.tar.gz 
+
+gzip: stdin: not in gzip format
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
+student@T43:~/mca/rmca$ tar -xvf arc.tar.gz
+a/
+a/cb.txt
+a/ab.txt~
+a/digit.txt
+a/ab.txt
+a/f6.txt
+a/r.txt
+a/states.txt
+a/number.txt
+a/st.txt
+a/c2.4
+a/g1.txt
+a/c1/
+a/c1/n3.txt
+a/c1/c1.txt
+a/c1/ad.txt
+a/c1/ub.txt
+a/c1/kerala.txt
+a/c1/new.txt
+a/c1/new.exc.odt
+a/c1/u.txt
+a/comp.tar.gz
+a/st1.txt/
+a/g.txt
+a/c3.txt
+a/c2.txt~
+a/f2.txt
+a/f3.txt
+a/f4.txt
+a/st3.txt/
+a/f1.txt
+a/f5.txt
+a/r1.txt
+student@T43:~/mca/rmca$ cd ..
+student@T43:~/mca$ cd lmca
+student@T43:~/mca/lmca$ ls
+a           ab.txt~  c1.txt  c5.txt  cb.txt     l1.txt  new
+abc.tar.gz  b.txt    c2.4    c6.txt  f3.txt     l2.txt
+ab.txt      c1       c3.txt  c7.txt  file3.txt  l3.txt
+student@T43:~/mca/lmca$ tar -xvzf gcomp.tar.gz *c
+tar (child): gcomp.tar.gz: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+student@T43:~/mca/lmca$ tar -xvzf arc.tar.gz *c
+tar (child): arc.tar.gz: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+student@T43:~/mca/lmca$ 
+

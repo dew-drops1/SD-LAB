@@ -1,0 +1,257 @@
+student@T43:~$ cd mca
+student@T43:~/mca$ cd lmca
+student@T43:~/mca/lmca$ ls
+a           ab.txt~  c1.txt  c5.txt  cb.txt     l1.txt  new
+abc.tar.gz  b.txt    c2.4    c6.txt  f3.txt     l2.txt
+ab.txt      c1       c3.txt  c7.txt  file3.txt  l3.txt
+student@T43:~/mca/lmca$ ls -l > c3.txt
+student@T43:~/mca/lmca$ cat c3.txt
+'total 64
+drwxr-xr-x 2 student student 4096 Feb 14 15:22 a
+-rw-r--r-- 1 student student  302 Mar 11 12:31 abc.tar.gz
+-rw-r--r-- 1 student student    4 Feb 11 12:48 ab.txt
+-rw-r--r-- 1 student student    4 Feb 11 11:35 ab.txt~
+-rw-r--r-- 1 student student    0 Feb 18 11:16 b.txt
+drwxr-xr-x 3 student student 4096 Feb 14 16:08 c1
+-rw-r--r-- 1 student student    4 Feb 11 12:52 c1.txt
+-rw-r--r-- 1 student student    2 Feb 11 11:36 c2.4
+-rw-r--r-- 1 student student    0 Mar 14 14:38 c3.txt
+-r--r--r-- 2 student student    4 Feb 11 11:35 c5.txt
+-rw-r--r-- 1 student student    0 Feb 11 12:39 c6.txt
+-r--r--r-- 2 student student    4 Feb 11 11:35 c7.txt
+-rw-r--r-- 1 student student   16 Feb 11 13:05 cb.txt
+-rw-r--r-- 1 student student   18 Feb 11 11:28 f3.txt
+-rw-r--r-- 1 student student    4 Feb 11 11:23 file3.txt
+-rw-r--r-- 1 student student    9 Feb 14 15:24 l1.txt
+-rw-r--r-- 2 student student   13 Feb 14 15:28 l2.txt
+-rw-r--r-- 2 student student   13 Feb 14 15:28 l3.txt
+drwxr-xr-x 3 student student 4096 Feb 14 15:14 new
+student@T43:~/mca/lmca$ l1.txt 2>efile.txt
+student@T43:~/mca/lmca$ cat efile.txt
+l1.txt: command not found
+student@T43:~/mca/lmca$ l1.txt 2 > efile.txt
+l1.txt: command not found
+student@T43:~/mca/lmca$ l1.txt 2 > efile
+l1.txt: command not found
+student@T43:~/mca/lmca$ l1 2> efile
+student@T43:~/mca/lmca$ cat efile
+l1: command not found
+student@T43:~/mca/lmca$ paste c1.txt c5.txt > c6.txt
+student@T43:~/mca/lmca$ cat c6.txt
+1	1
+2	2
+student@T43:~/mca/lmca$ cat efile
+l1: command not found
+student@T43:~/mca/lmca$ l1.txt 1 > efile
+l1.txt: command not found
+student@T43:~/mca/lmca$ cat <c1.txt
+1
+2
+student@T43:~/mca/lmca$ la -a <c1.txt
+.   abc.tar.gz  b.txt   c2.4    c6.txt  efile      file3.txt  l3.txt
+..  ab.txt      c1      c3.txt  c7.txt  efile.txt  l1.txt     new
+a   ab.txt~     c1.txt  c5.txt  cb.txt  f3.txt     l2.txt
+student@T43:~/mca/lmca$ cat < efile.txt >rt
+student@T43:~/mca/lmca$ cat rt
+student@T43:~/mca/lmca$ cat rt.txt
+cat: rt.txt: No such file or directory
+student@T43:~/mca/lmca$ cat < efile.txt > rt.txt
+student@T43:~/mca/lmca$ cat rt.txt
+student@T43:~/mca/lmca$ ls-l | more
+ls-l: command not found
+student@T43:~/mca/lmca$ ls-l | less
+student@T43:~/mca/lmca$ ls -l | less
+student@T43:~/mca/lmca$ ls -l | more
+total 72
+drwxr-xr-x 2 student student 4096 Feb 14 15:22 a
+-rw-r--r-- 1 student student  302 Mar 11 12:31 abc.tar.gz
+-rw-r--r-- 1 student student    4 Feb 11 12:48 ab.txt
+-rw-r--r-- 1 student student    4 Feb 11 11:35 ab.txt~
+-rw-r--r-- 1 student student    0 Feb 18 11:16 b.txt
+drwxr-xr-x 3 student student 4096 Feb 14 16:08 c1
+-rw-r--r-- 1 student student    4 Feb 11 12:52 c1.txt
+-rw-r--r-- 1 student student    2 Feb 11 11:36 c2.4
+-rw-r--r-- 1 student student 1028 Mar 14 14:38 c3.txt
+-r--r--r-- 2 student student    4 Feb 11 11:35 c5.txt
+-rw-r--r-- 1 student student    8 Mar 14 14:47 c6.txt
+-r--r--r-- 2 student student    4 Feb 11 11:35 c7.txt
+-rw-r--r-- 1 student student   16 Feb 11 13:05 cb.txt
+-rw-r--r-- 1 student student    0 Mar 14 14:50 efile
+-rw-r--r-- 1 student student    0 Mar 14 14:43 efile.txt
+-rw-r--r-- 1 student student   18 Feb 11 11:28 f3.txt
+-rw-r--r-- 1 student student    4 Feb 11 11:23 file3.txt
+-rw-r--r-- 1 student student    9 Feb 14 15:24 l1.txt
+-rw-r--r-- 2 student student   13 Feb 14 15:28 l2.txt
+-rw-r--r-- 2 student student   13 Feb 14 15:28 l3.txt
+drwxr-xr-x 3 student student 4096 Feb 14 15:14 new
+-rw-r--r-- 1 student student    0 Mar 14 14:59 rt
+student@T43:~/mca/lmca$ ls -l | less
+student@T43:~/mca/lmca$ ls
+a           ab.txt~  c1.txt  c5.txt  cb.txt     f3.txt     l2.txt  rt
+abc.tar.gz  b.txt    c2.4    c6.txt  efile      file3.txt  l3.txt  rt.txt
+ab.txt      c1       c3.txt  c7.txt  efile.txt  l1.txt     new
+student@T43:~/mca/lmca$ ls
+a           ab.txt~  c1.txt  c5.txt  cb.txt     f3.txt     l2.txt      new
+abc.tar.gz  b.txt    c2.4    c6.txt  efile      file3.txt  l3.txt      rt
+ab.txt      c1       c3.txt  c7.txt  efile.txt  l1.txt     nature.txt  rt.txt
+student@T43:~/mca/lmca$ cat nature.txt | grep -c "nature" nature.txt
+1
+student@T43:~/mca/lmca$ cat > user.txt
+permission..
+read
+write
+execute
+^C
+student@T43:~/mca/lmca$ chmod 741 user.txt
+student@T43:~/mca/lmca$ ls -l user.txt
+-rwxr----x 1 student student 32 Mar 14 15:19 user.txt
+student@T43:~/mca/lmca$ ls -l c6.txt
+-rw-r--r-- 1 student student 8 Mar 14 14:47 c6.txt
+student@T43:~/mca/lmca$ chmod 111 c6.txt
+student@T43:~/mca/lmca$ ls -l c6.txt
+---x--x--x 1 student student 8 Mar 14 14:47 c6.txt
+student@T43:~/mca/lmca$ cat c6.txt
+cat: c6.txt: Permission denied
+student@T43:~/mca/lmca$ chmod 466
+chmod: missing operand after ‘466’
+Try 'chmod --help' for more information.
+student@T43:~/mca/lmca$ chmod 466 c6.txt
+student@T43:~/mca/lmca$ cat c6.txt
+1	1
+2	2
+student@T43:~/mca/lmca$ ls -l
+total 80
+drwxr-xr-x 2 student student 4096 Feb 14 15:22 a
+-rw-r--r-- 1 student student  302 Mar 11 12:31 abc.tar.gz
+-rw-r--r-- 1 student student    4 Feb 11 12:48 ab.txt
+-rw-r--r-- 1 student student    4 Feb 11 11:35 ab.txt~
+-rw-r--r-- 1 student student    0 Feb 18 11:16 b.txt
+drwxr-xr-x 3 student student 4096 Feb 14 16:08 c1
+-rw-r--r-- 1 student student    4 Feb 11 12:52 c1.txt
+-rw-r--r-- 1 student student    2 Feb 11 11:36 c2.4
+-rw-r--r-- 1 student student 1028 Mar 14 14:38 c3.txt
+-r--r--r-- 2 student student    4 Feb 11 11:35 c5.txt
+-r--rw-rw- 1 student student    8 Mar 14 14:47 c6.txt
+-r--r--r-- 2 student student    4 Feb 11 11:35 c7.txt
+-rw-r--r-- 1 student student   16 Feb 11 13:05 cb.txt
+-rw-r--r-- 1 student student    0 Mar 14 14:50 efile
+-rw-r--r-- 1 student student    0 Mar 14 14:43 efile.txt
+-rw-r--r-- 1 student student   18 Feb 11 11:28 f3.txt
+-rw-r--r-- 1 student student    4 Feb 11 11:23 file3.txt
+-rw-r--r-- 1 student student    9 Feb 14 15:24 l1.txt
+-rw-r--r-- 2 student student   13 Feb 14 15:28 l2.txt
+-rw-r--r-- 2 student student   13 Feb 14 15:28 l3.txt
+-rw-r--r-- 1 student student  228 Mar 14 15:07 nature.txt
+drwxr-xr-x 3 student student 4096 Feb 14 15:14 new
+-rw-r--r-- 1 student student    0 Mar 14 14:59 rt
+-rw-r--r-- 1 student student    0 Mar 14 14:59 rt.txt
+-rwxr----x 1 student student   32 Mar 14 15:19 user.txt
+student@T43:~/mca/lmca$ ls -l c6.txt
+-r--rw-rw- 1 student student 8 Mar 14 14:47 c6.txt
+student@T43:~/mca/lmca$ chmod u=rw g=r o=r nature.txt
+chmod: cannot access 'g=r': No such file or directory
+chmod: cannot access 'o=r': No such file or directory
+student@T43:~/mca/lmca$ chmod u=rw,g=r,o=r nature.txt
+student@T43:~/mca/lmca$ ls -l nature.txt
+-rw-r--r-- 1 student student 228 Mar 14 15:07 nature.txt
+student@T43:~/mca/lmca$ chmod u+x nature.txt
+student@T43:~/mca/lmca$ ls -l nature.txt
+-rwxr--r-- 1 student student 228 Mar 14 15:07 nature.txt
+student@T43:~/mca/lmca$ cat > time.txt
+i hr       
+2 hr
+3 hr
+4 hr
+5 hr
+6 hr^C
+student@T43:~/mca/lmca$ cat < time.txt > hour.txt
+student@T43:~/mca/lmca$ cat hour.txt
+i hr
+2 hr
+3 hr
+4 hr
+5 hr
+student@T43:~/mca/lmca$ cat < hour.txt
+i hr
+2 hr
+3 hr
+4 hr
+5 hr
+student@T43:~/mca/lmca$ ls -l | more
+total 88
+drwxr-xr-x 2 student student 4096 Feb 14 15:22 a
+-rw-r--r-- 1 student student  302 Mar 11 12:31 abc.tar.gz
+-rw-r--r-- 1 student student    4 Feb 11 12:48 ab.txt
+-rw-r--r-- 1 student student    4 Feb 11 11:35 ab.txt~
+-rw-r--r-- 1 student student    0 Feb 18 11:16 b.txt
+drwxr-xr-x 3 student student 4096 Feb 14 16:08 c1
+-rw-r--r-- 1 student student    4 Feb 11 12:52 c1.txt
+-rw-r--r-- 1 student student    2 Feb 11 11:36 c2.4
+-rw-r--r-- 1 student student 1028 Mar 14 14:38 c3.txt
+-r--r--r-- 2 student student    4 Feb 11 11:35 c5.txt
+-r--rw-rw- 1 student student    8 Mar 14 14:47 c6.txt
+-r--r--r-- 2 student student    4 Feb 11 11:35 c7.txt
+-rw-r--r-- 1 student student   16 Feb 11 13:05 cb.txt
+-rw-r--r-- 1 student student    0 Mar 14 14:50 efile
+-rw-r--r-- 1 student student    0 Mar 14 14:43 efile.txt
+-rw-r--r-- 1 student student   18 Feb 11 11:28 f3.txt
+-rw-r--r-- 1 student student    4 Feb 11 11:23 file3.txt
+-rw-r--r-- 1 student student   25 Mar 14 15:49 hour.txt
+-rw-r--r-- 1 student student    9 Feb 14 15:24 l1.txt
+-rw-r--r-- 2 student student   13 Feb 14 15:28 l2.txt
+-rw-r--r-- 2 student student   13 Feb 14 15:28 l3.txt
+-rwxr--r-- 1 student student  228 Mar 14 15:07 nature.txt
+drwxr-xr-x 3 student student 4096 Feb 14 15:14 new
+-rw-r--r-- 1 student student    0 Mar 14 14:59 rt
+-rw-r--r-- 1 student student    0 Mar 14 14:59 rt.txt
+-rw-r--r-- 1 student student   25 Mar 14 15:47 time.txt
+-rwxr----x 1 student student   32 Mar 14 15:19 user.txt
+student@T43:~/mca/lmca$ cat > k1.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+1
+^C
+student@T43:~/mca/lmca$ cat > k1.txt^C
+student@T43:~/mca/lmca$ ^C
+student@T43:~/mca/lmca$ ^C
+student@T43:~/mca/lmca$ ls -l | more
+total 92
+drwxr-xr-x 2 student student 4096 Feb 14 15:22 a
+-rw-r--r-- 1 student student  302 Mar 11 12:31 abc.tar.gz
+-rw-r--r-- 1 student student    4 Feb 11 12:48 ab.txt
+-rw-r--r-- 1 student student    4 Feb 11 11:35 ab.txt~
+-rw-r--r-- 1 student student    0 Feb 18 11:16 b.txt
+drwxr-xr-x 3 student student 4096 Feb 14 16:08 c1
+-rw-r--r-- 1 student student    4 Feb 11 12:52 c1.txt
+-rw-r--r-- 1 student student    2 Feb 11 11:36 c2.4
+-rw-r--r-- 1 student student 1028 Mar 14 14:38 c3.txt
+-r--r--r-- 2 student student    4 Feb 11 11:35 c5.txt
+-r--rw-rw- 1 student student    8 Mar 14 14:47 c6.txt
+-r--r--r-- 2 student student    4 Feb 11 11:35 c7.txt
+-rw-r--r-- 1 student student   16 Feb 11 13:05 cb.txt
+-rw-r--r-- 1 student student    0 Mar 14 14:50 efile
+-rw-r--r-- 1 student student    0 Mar 14 14:43 efile.txt
+-rw-r--r-- 1 student student   18 Feb 11 11:28 f3.txt
+-rw-r--r-- 1 student student    4 Feb 11 11:23 file3.txt
+-rw-r--r-- 1 student student   25 Mar 14 15:49 hour.txt
+-rw-r--r-- 1 student student   29 Mar 14 16:02 k1.txt
+-rw-r--r-- 1 student student    9 Feb 14 15:24 l1.txt
+-rw-r--r-- 2 student student   13 Feb 14 15:28 l2.txt
+-rw-r--r-- 2 student student   13 Feb 14 15:28 l3.txt
+-rwxr--r-- 1 student student  228 Mar 14 15:07 nature.txt
+drwxr-xr-x 3 student student 4096 Feb 14 15:14 new
+-rw-r--r-- 1 student student    0 Mar 14 14:59 rt
+-rw-r--r-- 1 student student    0 Mar 14 14:59 rt.txt
+-rw-r--r-- 1 student student   25 Mar 14 15:47 time.txt
+-rwxr----x 1 student student   32 Mar 14 15:19 user.txt
+

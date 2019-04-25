@@ -1,0 +1,229 @@
+student@T43:~$ cd tintugit
+student@T43:~/tintugit$ git init test2
+Initialized empty Git repository in /home/student/tintugit/test2/.git/
+student@T43:~/tintugit$ cd test2
+student@T43:~/tintugit/test2$ git global user.name "dew-drops1"
+git: 'global' is not a git command. See 'git --help'.
+student@T43:~/tintugit/test2$ git config  user.name "dew-drops1"
+student@T43:~/tintugit/test2$ git config  user.email "tintukl@mca.ajce.in"
+student@T43:~/tintugit/test2$ gedit mytest.txt
+student@T43:~/tintugit/test2$ git add mytest.txt
+student@T43:~/tintugit/test2$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   mytest.txt
+
+student@T43:~/tintugit/test2$ git commit -m "sample file with program"
+[master (root-commit) b6a51e9] sample file with program
+ 1 file changed, 22 insertions(+)
+ create mode 100644 mytest.txt
+student@T43:~/tintugit/test2$ git remote add origin https://github.com/dew-drops1/test2
+student@T43:~/tintugit/test2$ git push origin master
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 452 bytes | 452.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/dew-drops1/test2
+ * [new branch]      master -> master
+student@T43:~/tintugit/test2$ git clone https://github.com/dew-drops1/test2
+Cloning into 'test2'...
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+student@T43:~/tintugit/test2$ gedit myfile2.txt
+student@T43:~/tintugit/test2$ git add myfile2.txt
+student@T43:~/tintugit/test2$ git commit -m "sample palindrome program"
+[master 842eb44] sample palindrome program
+ 1 file changed, 26 insertions(+)
+ create mode 100644 myfile2.txt
+student@T43:~/tintugit/test2$ git remote add origin #include <stdio.h>
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+   
+student@T43:~/tintugit/test2$     
+student@T43:~/tintugit/test2$     return 0;
+bash: return: can only `return' from a function or sourced script
+student@T43:~/tintugit/test2$ git remote add origin https://github.com/dew-drops1/test2
+fatal: remote origin already exists.
+student@T43:~/tintugit/test2$ git  remote add origin https://github.com/dew-drops1/test2
+fatal: remote origin already exists.
+student@T43:~/tintugit/test2$ git push origin master
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 543 bytes | 543.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/dew-drops1/test2
+   b6a51e9..842eb44  master -> master
+student@T43:~/tintugit/test2$ git clone https://github.com/dew-drops1/test2
+fatal: destination path 'test2' already exists and is not an empty directory.
+student@T43:~/tintugit/test2$ git branch newbranch
+student@T43:~/tintugit/test2$ git checkout newbranch
+Switched to branch 'newbranch'
+student@T43:~/tintugit/test2$ git push origin newbranch
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'newbranch' on GitHub by visiting:
+remote:      https://github.com/dew-drops1/test2/pull/new/newbranch
+remote: 
+To https://github.com/dew-drops1/test2
+ * [new branch]      newbranch -> newbranch
+student@T43:~/tintugit/test2$ git clone https://github.com/dew-drops1/test2/blob/master/myfile2.txt
+fatal: destination path 'myfile2.txt' already exists and is not an empty directory.
+student@T43:~/tintugit/test2$ git fetch mytest.txt
+fatal: invalid gitfile format: mytest.txt
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T43:~/tintugit/test2$ git fetch origin master
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/dew-drops1/test2
+ * branch            master     -> FETCH_HEAD
+   842eb44..982c3c6  master     -> origin/master
+student@T43:~/tintugit/test2$ git merge master
+Already up to date.
+student@T43:~/tintugit/test2$ git pull origin master
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+From https://github.com/dew-drops1/test2
+ * branch            master     -> FETCH_HEAD
+Updating 842eb44..982c3c6
+Fast-forward
+ mytest.txt | 1 +
+ 1 file changed, 1 insertion(+)
+student@T43:~/tintugit/test2$ git checkout newbranch
+Already on 'newbranch'
+student@T43:~/tintugit/test2$ git checkout master
+Switched to branch 'master'
+student@T43:~/tintugit/test2$ git branch sample
+student@T43:~/tintugit/test2$ git checkout sample
+Switched to branch 'sample'
+student@T43:~/tintugit/test2$ git push origin sample
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'sample' on GitHub by visiting:
+remote:      https://github.com/dew-drops1/test2/pull/new/sample
+remote: 
+To https://github.com/dew-drops1/test2
+ * [new branch]      sample -> sample
+student@T43:~/tintugit/test2$ git branch sample2
+student@T43:~/tintugit/test2$ git checkout sample2
+Switched to branch 'sample2'
+student@T43:~/tintugit/test2$ git push origin sample2
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'sample2' on GitHub by visiting:
+remote:      https://github.com/dew-drops1/test2/pull/new/sample2
+remote: 
+To https://github.com/dew-drops1/test2
+ * [new branch]      sample2 -> sample2
+student@T43:~/tintugit/test2$ git fetch origin sample2
+Username for 'https://github.com': dew-drops-1
+Password for 'https://dew-drops-1@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/dew-drops1/test2/'
+student@T43:~/tintugit/test2$ git fetch origin sample2
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/dew-drops1/test2
+ * branch            sample2    -> FETCH_HEAD
+   842eb44..8535459  sample2    -> origin/sample2
+student@T43:~/tintugit/test2$ git merge sample2
+Already up to date.
+student@T43:~/tintugit/test2$ git pull origin sample2
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+From https://github.com/dew-drops1/test2
+ * branch            sample2    -> FETCH_HEAD
+Updating 842eb44..8535459
+Fast-forward
+ myfile2.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+student@T43:~/tintugit/test2$ git fetch origin sample2
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/dew-drops1/test2
+ * branch            sample2    -> FETCH_HEAD
+   8535459..39ca82d  sample2    -> origin/sample2
+student@T43:~/tintugit/test2$ git diff origin/sample2
+diff --git a/myfile2.txt b/myfile2.txt
+index 3a5b43b..fff69df 100644
+--- a/myfile2.txt
++++ b/myfile2.txt
+@@ -3,7 +3,6 @@ int main()
+ {
+     int n, reversedInteger = 0, remainder, originalInteger;
+ printf("haiiiiiiiiiiiiii ");
+-printf("welcome ");
+     printf("Enter an integer: ");
+     scanf("%d", &n);
+ 
+student@T43:~/tintugit/test2$ git clone https://github.com/dew-drops1/test2.git
+fatal: destination path 'test2' already exists and is not an empty directory.
+student@T43:~/tintugit/test2$ cd ..
+student@T43:~/tintugit$ mkdir test3
+student@T43:~/tintugit$ ls
+SampleRepo  test  test2  test3  TestRepo
+student@T43:~/tintugit$ cd test3
+student@T43:~/tintugit/test3$ git clone https://github.com/dew-drops1/test2.git
+Cloning into 'test2'...
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+remote: Enumerating objects: 15, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 15 (delta 3), reused 4 (delta 0), pack-reused 0
+Unpacking objects: 100% (15/15), done.
+student@T43:~/tintugit/test3$ ls
+test2
+student@T43:~/tintugit/test3$ cd test2
+student@T43:~/tintugit/test3/test2$ ls
+myfile2.txt  mytest.txt
+student@T43:~/tintugit/test3/test2$ 
+

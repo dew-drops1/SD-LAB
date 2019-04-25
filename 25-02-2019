@@ -1,0 +1,635 @@
+student@T43:~$ cd mca
+student@T43:~/mca$ cd rmca
+student@T43:~/mca/rmca$ cd a
+student@T43:~/mca/rmca/a$ ls
+ab.txt   c1    c2.txt~  cb.txt  f2.txt  f4.txt  f6.txt   st3.txt
+ab.txt~  c2.4  c3.txt   f1.txt  f3.txt  f5.txt  st1.txt  states.txt
+student@T43:~/mca/rmca/a$ head states.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+student@T43:~/mca/rmca/a$ head -n 3 states.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+student@T43:~/mca/rmca/a$ head -c 3 states.txt
+Andstudent@T43:~/mca/rmca/a$ head -c 8 states.txt
+Andhra Pstudent@T43:~/mca/rmca/a$ head  states.txt number.txt
+==> states.txt <==
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+
+==> number.txt <==
+aaa
+bbb
+ccc
+ddd
+eee
+fff
+ggg
+hhh
+iii
+jjj
+student@T43:~/mca/rmca/a$ head -n 3 states.txt number.txt
+==> states.txt <==
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+
+==> number.txt <==
+aaa
+bbb
+ccc
+student@T43:~/mca/rmca/a$ head -q states.txt number.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+aaa
+bbb
+ccc
+ddd
+eee
+fff
+ggg
+hhh
+iii
+jjj
+student@T43:~/mca/rmca/a$ head -v states.txt number.txt
+==> states.txt <==
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+
+==> number.txt <==
+aaa
+bbb
+ccc
+ddd
+eee
+fff
+ggg
+hhh
+iii
+jjj
+student@T43:~/mca/rmca/a$ head -v states.txt
+==> states.txt <==
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+student@T43:~/mca/rmca/a$ man head
+student@T43:~/mca/rmca/a$ tail states.txt
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+
+
+student@T43:~/mca/rmca/a$ tail states.txt numbers.txt
+==> states.txt <==
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+
+
+tail: cannot open 'numbers.txt' for reading: No such file or directory
+student@T43:~/mca/rmca/a$ tail numbers.txt
+tail: cannot open 'numbers.txt' for reading: No such file or directory
+student@T43:~/mca/rmca/a$ tail number.txt
+ttt
+uuu
+vvv
+www
+xxx
+yyy
+zzz
+111
+222
+333
+student@T43:~/mca/rmca/a$ tail-n 6 number.txt
+tail-n: command not found
+student@T43:~/mca/rmca/a$ tail -n 6 number.txt
+xxx
+yyy
+zzz
+111
+222
+333
+student@T43:~/mca/rmca/a$ tail -c 2 number.txt
+3
+student@T43:~/mca/rmca/a$ tail -q number.txt states.txt
+ttt
+uuu
+vvv
+www
+xxx
+yyy
+zzz
+111
+222
+333
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+
+
+student@T43:~/mca/rmca/a$ tail -c 3 -q number.txt states.txt
+33
+
+
+
+student@T43:~/mca/rmca/a$ tail -n 3 -q number.txt states.txt
+111
+222
+333
+West Bengal
+
+
+student@T43:~/mca/rmca/a$ tail -q number.txt states.txt
+ttt
+uuu
+vvv
+www
+xxx
+yyy
+zzz
+111
+222
+333
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+
+
+student@T43:~/mca/rmca/a$ tail  number.txt states.txt
+==> number.txt <==
+ttt
+uuu
+vvv
+www
+xxx
+yyy
+zzz
+111
+222
+333
+
+==> states.txt <==
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+
+
+student@T43:~/mca/rmca/a$ tail -f  states.txt
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+
+
+^C      
+student@T43:~/mca/rmca/a$ tail -f  states.txt
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+
+
+kerala
+^C
+student@T43:~/mca/rmca/a$ tail -f  states.txt
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+
+
+^C
+student@T43:~/mca/rmca/a$ tail -v  states.txt
+==> states.txt <==
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+
+
+student@T43:~/mca/rmca/a$ tail -v  states.txt number.txt
+==> states.txt <==
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+
+
+
+==> number.txt <==
+ttt
+uuu
+vvv
+www
+xxx
+yyy
+zzz
+111
+222
+333
+student@T43:~/mca/rmca/a$ tail -n 3  states.txt
+West Bengal
+
+
+student@T43:~/mca/rmca/a$ tail -c 3  states.txt
+
+
+
+student@T43:~/mca/rmca/a$ tail -n 11  states.txt
+Punjab
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+
+
+student@T43:~/mca/rmca/a$ tail  states.txt
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+
+
+student@T43:~/mca/rmca/a$ tail number.txt
+ttt
+uuu
+vvv
+www
+xxx
+yyy
+zzz
+111
+222
+333
+student@T43:~/mca/rmca/a$ tail states.txt
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+
+
+student@T43:~/mca/rmca/a$ cat > digit.txt
+1
+2
+3
+4
+5
+6
+7
+
+8
+9
+1
+10
+11
+12
+13
+14
+15
+1
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+29
+^C
+student@T43:~/mca/rmca/a$ cat digit.txt
+1
+2
+3
+4
+5
+6
+7
+
+8
+9
+1
+10
+11
+12
+13
+14
+15
+1
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+29
+student@T43:~/mca/rmca/a$ cat states.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+Jharkhand
+Karnataka
+Kerala
+Madhya Pradesh
+Maharashtra
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+Odisha
+Punjab
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+
+
+student@T43:~/mca/rmca/a$ cat st.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+Jharkhand
+Karnataka
+Kerala
+Madhya Pradesh
+Maharashtra
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+Odisha
+Punjab
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+student@T43:~/mca/rmca/a$ tail st.txt
+Odisha
+Punjab
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+student@T43:~/mca/rmca/a$ tail -n 4 st.txt
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+student@T43:~/mca/rmca/a$ tail -c 4 st.txt
+gal
+student@T43:~/mca/rmca/a$ tail -c 7 st.txt
+Bengal
+student@T43:~/mca/rmca/a$ tail -n 3 st.txt |sort -r
+West Bengal
+Uttar Pradesh
+Uttarakhand
+student@T43:~/mca/rmca/a$ head -n 12 number.txt | tail -n 12 
+aaa
+bbb
+ccc
+ddd
+eee
+fff
+ggg
+hhh
+iii
+jjj
+kkk
+lll
+student@T43:~/mca/rmca/a$ head -n 12 number.txt | tail -n 10 
+ccc
+ddd
+eee
+fff
+ggg
+hhh
+iii
+jjj
+kkk
+lll
+student@T43:~/mca/rmca/a$ head -n 15 number.txt | tail -n 5
+kkk
+lll
+mm
+nnn
+ooo
+student@T43:~/mca/rmca/a$ head -n 15 digit.txt | tail -n 5 digit.txt
+23
+24
+25
+26
+29
+student@T43:~/mca/rmca/a$ head -n 3 st.txt number.txt
+==> st.txt <==
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+
+==> number.txt <==
+aaa
+bbb
+ccc
+student@T43:~/mca/rmca/a$ head -q -n 3 st.txt number.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+aaa
+bbb
+ccc
+student@T43:~/mca/rmca/a$ head -v -n 3 st.txt
+==> st.txt <==
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+student@T43:~/mca/rmca/a$ head -v -n 3 digits.txt
+head: cannot open 'digits.txt' for reading: No such file or directory
+student@T43:~/mca/rmca/a$ head -v -n 3 digit.txt
+==> digit.txt <==
+1
+2
+3
+student@T43:~/mca/rmca/a$ tail digit.txt
+18
+19
+20
+21
+22
+23
+24
+25
+26
+29
+student@T43:~/mca/rmca/a$ tail -n 7 number.txt
+www
+xxx
+yyy
+zzz
+111
+222
+333
+student@T43:~/mca/rmca/a$ tail -c 4 st.txt
+gal
+student@T43:~/mca/rmca/a$ tail -c 6 st.txt
+engal
+student@T43:~/mca/rmca/a$ tail -q -n 4 digit.txt number.txt
+24
+25
+26
+29
+zzz
+111
+222
+333
+student@T43:~/mca/rmca/a$ tail -f  digit.txt 
+18
+19
+20
+21
+22
+23
+24
+25
+26
+29
+000
+^C
+student@T43:~/mca/rmca/a$ tail -n -v  digit.txt 
+tail: invalid number of lines: ‘v’
+student@T43:~/mca/rmca/a$ tail  -v -n 2  digit.txt 
+==> digit.txt <==
+26
+29
+student@T43:~/mca/rmca/a$ tail  -v -n 2  digit.t^C 
+student@T43:~/mca/rmca/a$ 
+

@@ -1,0 +1,237 @@
+student@T14:~$ cd mca
+bash: cd: mca: No such file or directory
+student@T14:~$ cd ajce
+student@T14:~/ajce$ cd mca
+student@T14:~/ajce/mca$ mkdir p
+student@T14:~/ajce/mca$ cat > a.txt
+welcome to linux..
+welcome to android...123456
+1234567890abcdefghijklmnop
+1234aaabb
+^C
+student@T14:~/ajce/mca$ wc a.txt
+ 4  8 84 a.txt
+student@T14:~/ajce/mca$ cut -c 3 a.txt
+l
+l
+3
+3
+student@T14:~/ajce/mca$ mv a.txt /home/ajce/mca/p
+mv: cannot move 'a.txt' to '/home/ajce/mca/p': No such file or directory
+student@T14:~/ajce/mca$ cd p
+student@T14:~/ajce/mca/p$ pwd
+/home/student/ajce/mca/p
+student@T14:~/ajce/mca/p$ cat > a.txt
+aaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbb
+^C
+student@T14:~/ajce/mca/p$ cat > f1.txt
+anu
+manu
+sinu
+ammu
+achu
+^C
+student@T14:~/ajce/mca/p$ cat > f2.txt
+kannur
+kollam
+tvm
+kottayam
+^C
+student@T14:~/ajce/mca/p$ cat > f3.txt
+123
+345
+456
+678
+910
+^C
+student@T14:~/ajce/mca/p$ paste f1.txt f2.txt f3.txt
+anu	kannur	123
+manu	kollam	345
+sinu	tvm	456
+ammu	kottayam	678
+achu		910
+student@T14:~/ajce/mca/p$ paste f1.txt f3.txt
+anu	123
+manu	345
+sinu	456
+ammu	678
+achu	910
+student@T14:~/ajce/mca/p$ paste -d "-" f1.txt f3.txt
+anu-123
+manu-345
+sinu-456
+ammu-678
+achu-910
+student@T14:~/ajce/mca/p$ paste -d "|" f1.txt f3.txt
+anu|123
+manu|345
+sinu|456
+ammu|678
+achu|910
+student@T14:~/ajce/mca/p$ paste -s f1.txt f3.txt
+anu	manu	sinu	ammu	achu
+123	345	456	678	910
+student@T14:~/ajce/mca/p$ paste -s f1.txt f2.txt f3.txt
+anu	manu	sinu	ammu	achu
+kannur	kollam	tvm	kottayam
+123	345	456	678	910
+student@T14:~/ajce/mca/p$ paste -s -d f1.txt  f3.txt
+123f3451456.678t910
+student@T14:~/ajce/mca/p$ paste -s -d ":" f1.txt  f3.txt
+anu:manu:sinu:ammu:achu
+123:345:456:678:910
+student@T14:~/ajce/mca/p$ paste -s -d ":" f1.txt
+anu:manu:sinu:ammu:achu
+student@T14:~/ajce/mca/p$ cat f1.txt | paste --
+anu
+manu
+sinu
+ammu
+achu
+student@T14:~/ajce/mca/p$ cat f1.txt | paste -
+anu
+manu
+sinu
+ammu
+achu
+student@T14:~/ajce/mca/p$ cat f1.txt | paste -->
+bash: syntax error near unexpected token `newline'
+student@T14:~/ajce/mca/p$ cat f1.txt | paste ---
+paste: unrecognized option '---'
+Try 'paste --help' for more information.
+student@T14:~/ajce/mca/p$ cat f1.txt | paste - - -
+anu	manu	sinu
+ammu	achu	
+student@T14:~/ajce/mca/p$ cat f1.txt | paste - - - >
+bash: syntax error near unexpected token `newline'
+student@T14:~/ajce/mca/p$ paste - - - < f2.txt
+kannur	kollam	tvm
+kottayamkannur		
+                                                                            
+            
+	
+	kollam[A^[[A^[[A^[[A^[[A
+^C
+student@T14:~/ajce/mca/p$ paste - - - f2.txt
+^C  
+student@T14:~/ajce/mca/p$ paste - - - < f3.txt
+123	345	456
+678	910	
+student@T14:~/ajce/mca/p$ cat f3.txt | paste - - -
+123	345	456
+678	910	
+student@T14:~/ajce/mca/p$  paste - - - f3.txt
+paste - - f3.txt
+paste - - f3.txt	^C
+student@T14:~/ajce/mca/p$  paste - - f3.txt
+^C
+student@T14:~/ajce/mca/p$  paste - - < f3.txt
+123	345
+456	678
+910	
+student@T14:~/ajce/mca/p$ paste - - - < f3.txt f1.txt
+123	345	456	anu
+678	910		manu
+			sinu
+			ammu
+			achu
+student@T14:~/ajce/mca/p$ paste - < f1.txt
+anu
+manu
+sinu
+ammu
+achu
+student@T14:~/ajce/mca/p$ paste - - < f1.txt
+anu	manu
+sinu	ammu
+achu	
+student@T14:~/ajce/mca/p$ paste  -d "|" f1.txt f2.txt
+anu|kannur
+manu|kollam
+sinu|tvm
+ammu|kottayam
+achu|
+student@T14:~/ajce/mca/p$ paste  -d "|," f1.txt f2.txt
+anu|kannur
+manu|kollam
+sinu|tvm
+ammu|kottayam
+achu|
+student@T14:~/ajce/mca/p$ paste  -d "| ," f1.txt f2.txt
+anu|kannur
+manu|kollam
+sinu|tvm
+ammu|kottayam
+achu|
+student@T14:~/ajce/mca/p$ paste  -d "| ," f1.txt f2.txt f3.txt
+anu|kannur 123
+manu|kollam 345
+sinu|tvm 456
+ammu|kottayam 678
+achu| 910
+student@T14:~/ajce/mca/p$ paste  -d "|" f1.txt f2.txt f3.txt
+anu|kannur|123
+manu|kollam|345
+sinu|tvm|456
+ammu|kottayam|678
+achu||910
+student@T14:~/ajce/mca/p$ paste -v f3.txt
+paste: invalid option -- 'v'
+Try 'paste --help' for more information.
+student@T14:~/ajce/mca/p$ paste -b f3.txt
+paste: invalid option -- 'b'
+Try 'paste --help' for more information.
+student@T14:~/ajce/mca/p$ man paste
+student@T14:~/ajce/mca/p$ paste --v f3.txt
+paste (GNU coreutils) 8.28
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by David M. Ihnat and David MacKenzie.
+student@T14:~/ajce/mca/p$ paste -d "|" f1.txt f2.txt f3.txt
+anu|kannur|123
+manu|kollam|345
+sinu|tvm|456
+ammu|kottayam|678
+achu||910
+student@T14:~/ajce/mca/p$ paste -d "|," f1.txt f2.txt f3.txt
+anu|kannur,123
+manu|kollam,345
+sinu|tvm,456
+ammu|kottayam,678
+achu|,910
+student@T14:~/ajce/mca/p$ cat f1.txt | paste - -
+anu	manu
+sinu	ammu
+achu	
+student@T14:~/ajce/mca/p$ cat > f4.txt
+anju
+arya
+nimmi
+hari
+rini
+sumi
+appu
+kichu
+venu
+abi
+emil
+rubi
+^C   
+student@T14:~/ajce/mca/p$ paste -d f4.txt
+^C
+student@T14:~/ajce/mca/p$ paste -s ":" f4.txt
+paste: ':': No such file or directory
+anju	arya	nimmi	hari	rini	sumi	appu	kichu	venu	abi	emil	rubi
+student@T14:~/ajce/mca/p$ paste -s -d ":" f4.txt
+anju:arya:nimmi:hari:rini:sumi:appu:kichu:venu:abi:emil:rubi
+student@T14:~/ajce/mca/p$ cat f4.txt | paste - - - -
+anju	arya	nimmi	hari
+rini	sumi	appu	kichu
+venu	abi	emil	rubi
+student@T14:~/ajce/mca/p$ man paste
+student@T14:~/ajce/mca/p$ 
+

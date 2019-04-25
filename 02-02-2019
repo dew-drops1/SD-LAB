@@ -1,0 +1,350 @@
+student@T43:~$ touch myfile1
+student@T43:~$ cat > myfile1
+basic linux commands example
+cat myfile1
+^C
+student@T43:~$ cd ajce
+student@T43:~/ajce$ cd mca
+student@T43:~/ajce/mca$ cd rmca
+student@T43:~/ajce/mca/rmca$ touch file1
+student@T43:~/ajce/mca/rmca$ cat > file1
+basic linux commands...cd,ls^C
+student@T43:~/ajce/mca/rmca$ cat file1
+student@T43:~/ajce/mca/rmca$ touch file.txt
+student@T43:~/ajce/mca/rmca$ cat > file1.txt
+basic linux commands...^C
+student@T43:~/ajce/mca/rmca$ cat file1.txt
+student@T43:~/ajce/mca/rmca$ touch sample.txt
+student@T43:~/ajce/mca/rmca$ cat sample.txt
+basic linux comands
+student@T43:~/ajce/mca/rmca$ cat > sample2.txt
+abcdef...^C
+student@T43:~/ajce/mca/rmca$ cat sample>sample2
+cat: sample: No such file or directory
+student@T43:~/ajce/mca/rmca$ cat sample.txt>sample2.txt
+student@T43:~/ajce/mca/rmca$ cat sample2.txt
+basic linux comands
+student@T43:~/ajce/mca/rmca$ cat > sample2.txt
+cd,ls,read...
+^C
+student@T43:~/ajce/mca/rmca$ cat sample2.txt
+cd,ls,read...
+student@T43:~/ajce/mca/rmca$ cat > test.txt
+appending this..
+^C
+student@T43:~/ajce/mca/rmca$ cat test.txt
+appending this..
+student@T43:~/ajce/mca/rmca$ cat test.txt >> sample2.txt
+student@T43:~/ajce/mca/rmca$ cat sample2.txt
+cd,ls,read...
+appending this..
+student@T43:~/ajce/mca/rmca$ cat -n sample2.txt
+     1	cd,ls,read...
+     2	appending this..
+student@T43:~/ajce/mca/rmca$ cat *.txt
+cd,ls,read...
+appending this..
+basic linux comands
+appending this..
+student@T43:~/ajce/mca/rmca$ cat > res.txt
+hello
+world..
+welcome....
+^C
+student@T43:~/ajce/mca/rmca$ cat res.txt
+hello
+world..
+welcome....
+student@T43:~/ajce/mca/rmca$ cat sample.txt sample2.txt rest.txt>res.txt
+cat: rest.txt: No such file or directory
+student@T43:~/ajce/mca/rmca$ cat sample.txt sample2.txt rest.txt > res.txt
+cat: rest.txt: No such file or directory
+student@T43:~/ajce/mca/rmca$ ls
+file1      file.txt  sample2      sample.txt  test.txt
+file1.txt  res.txt   sample2.txt  student
+student@T43:~/ajce/mca/rmca$ cat sample.txt sample2.txt > new.txt
+student@T43:~/ajce/mca/rmca$ cat new.txt
+basic linux comands
+cd,ls,read...
+appending this..
+student@T43:~/ajce/mca/rmca$ cat *.txt
+basic linux comands
+cd,ls,read...
+appending this..
+basic linux comands
+cd,ls,read...
+appending this..
+cd,ls,read...
+appending this..
+basic linux comands
+appending this..
+student@T43:~/ajce/mca/rmca$ cat -n new.txt
+     1	basic linux comands
+     2	cd,ls,read...
+     3	appending this..
+student@T43:~/ajce/mca/rmca$ cat -t new.txt
+basic linux comands
+cd,ls,read...
+appending this..
+student@T43:~/ajce/mca/rmca$ man cat
+student@T43:~/ajce/mca/rmca$ cat -t new.txt
+^Ibasic linux comands
+^Icd,ls,read...
+^Iappending this..
+student@T43:~/ajce/mca/rmca$ cat sample.txt;test.txt > myfile1.txt
+basic linux comands
+test.txt: command not found
+student@T43:~/ajce/mca/rmca$ cat > num.txt
+1
+2
+
+5
+6
+ 
+
+8
+^C
+student@T43:~/ajce/mca/rmca$ cat num.txt
+1
+2
+
+5
+6
+
+
+8
+student@T43:~/ajce/mca/rmca$ cat -s num.txt
+1
+2
+
+5
+6
+
+8
+student@T43:~/ajce/mca/rmca$ cat -s num.txt
+1
+2
+
+5
+6
+
+8
+student@T43:~/ajce/mca/rmca$ man-s
+man-s: command not found
+student@T43:~/ajce/mca/rmca$ man s-s
+No manual entry for s-s
+student@T43:~/ajce/mca/rmca$ man -s
+man: option requires an argument -- 's'
+Try 'man --help' or 'man --usage' for more information.
+student@T43:~/ajce/mca/rmca$ man s
+No manual entry for s
+student@T43:~/ajce/mca/rmca$ man s
+No manual entry for s
+student@T43:~/ajce/mca/rmca$ cat num
+cat: num: No such file or directory
+student@T43:~/ajce/mca/rmca$ cat num.txt
+1
+2
+
+5
+6
+
+
+8
+student@T43:~/ajce/mca/rmca$ cat -s num.txt
+1
+2
+
+5
+6
+
+8
+student@T43:~/ajce/mca/rmca$ cat > num.txt
+7
+
+
+
+4
+
+
+
+
+
+
+
+12
+^C
+student@T43:~/ajce/mca/rmca$ cat num.txt
+7
+
+
+
+4
+
+
+
+
+
+
+
+12
+student@T43:~/ajce/mca/rmca$ cat -s num.txt
+7
+
+4
+
+12
+student@T43:~/ajce/mca/rmca$ man cat
+student@T43:~/ajce/mca/rmca$ cat -b num.txt
+     1	7
+
+
+
+     2	4
+
+
+
+
+
+
+
+     3	12
+student@T43:~/ajce/mca/rmca$ man cat
+student@T43:~/ajce/mca/rmca$ cat -v num.txt
+7
+
+
+
+4
+
+
+
+
+
+
+
+12
+student@T43:~/ajce/mca/rmca$ man cat
+student@T43:~/ajce/mca/rmca$ cat -E num.txt
+7$
+$
+$
+$
+4$
+$
+$
+$
+$
+$
+$
+$
+12$
+student@T43:~/ajce/mca/rmca$ cat -E sample.txt
+basic linux comands$
+student@T43:~/ajce/mca/rmca$ cat < sample.txt
+basic linux comands
+student@T43:~/ajce/mca/rmca$ man cat
+student@T43:~/ajce/mca/rmca$ cat -A sample2.txt
+cd,ls,read...$
+appending this..$
+student@T43:~/ajce/mca/rmca$ cat -d num.txt
+cat: invalid option -- 'd'
+Try 'cat --help' for more information.
+student@T43:~/ajce/mca/rmca$ man cat
+student@T43:~/ajce/mca/rmca$ mv new.txt file1.txt
+student@T43:~/ajce/mca/rmca$ cat file1.txt
+	basic linux comands
+	cd,ls,read...
+	appending this..
+student@T43:~/ajce/mca/rmca$ ls
+file1.txt  myfile1.txt  res.txt  sample2.txt  student
+file.txt   num.txt      sample2  sample.txt   test.txt
+student@T43:~/ajce/mca/rmca$ man mv
+student@T43:~/ajce/mca/rmca$ mv -i rmca le
+mv: cannot stat 'rmca': No such file or directory
+student@T43:~/ajce/mca/rmca$ mv -i file1.txt res.txt
+mv: overwrite 'res.txt'? n
+student@T43:~/ajce/mca/rmca$ man mv
+student@T43:~/ajce/mca/rmca$ cat test.txt
+appending this..
+student@T43:~/ajce/mca/rmca$ cat res.txt
+basic linux comands
+cd,ls,read...
+appending this..
+student@T43:~/ajce/mca/rmca$ mv -n res.txt test.txt
+student@T43:~/ajce/mca/rmca$ ls
+file1.txt  myfile1.txt  res.txt  sample2.txt  student
+file.txt   num.txt      sample2  sample.txt   test.txt
+student@T43:~/ajce/mca/rmca$ man mv
+student@T43:~/ajce/mca/rmca$ cat test.txt
+appending this..
+student@T43:~/ajce/mca/rmca$ man mv
+student@T43:~/ajce/mca/rmca$ mv -f file1.txt test.txt
+student@T43:~/ajce/mca/rmca$ cat test.txt
+	basic linux comands
+	cd,ls,read...
+	appending this..
+student@T43:~/ajce/mca/rmca$ mv rmca le
+mv: cannot stat 'rmca': No such file or directory
+student@T43:~/ajce/mca/rmca$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T43:~/ajce/mca/rmca$ cd ..
+student@T43:~/ajce/mca$ mv rmca le
+student@T43:~/ajce/mca$ ls
+intmca  le  out.txt
+student@T43:~/ajce/mca$ mkdir ab
+student@T43:~/ajce/mca$ mv *.txt ab
+student@T43:~/ajce/mca$ ls
+ab  intmca  le
+student@T43:~/ajce/mca$ cd ab
+student@T43:~/ajce/mca/ab$ ls
+out.txt
+student@T43:~/ajce/mca/ab$ cd ..
+student@T43:~/ajce/mca$ cd le
+student@T43:~/ajce/mca/le$ ls
+rmca  studnt
+student@T43:~/ajce/mca/le$ cd rmca
+student@T43:~/ajce/mca/le/rmca$ ls
+file.txt     num.txt  sample2      sample.txt  test.txt
+myfile1.txt  res.txt  sample2.txt  student
+student@T43:~/ajce/mca/le/rmca$ mv *.txt student
+student@T43:~/ajce/mca/le/rmca$ cd student
+student@T43:~/ajce/mca/le/rmca/student$ ls
+file.txt  myfile1.txt  num.txt  res.txt  sample2.txt  sample.txt  test.txt
+student@T43:~/ajce/mca/le/rmca/student$ cd..
+cd..: command not found
+student@T43:~/ajce/mca/le/rmca/student$ cd ..
+student@T43:~/ajce/mca/le/rmca$ cd ..
+student@T43:~/ajce/mca/le$ ls
+rmca  studnt
+student@T43:~/ajce/mca/le$ cd ..
+student@T43:~/ajce/mca$ ls
+ab  intmca  le
+student@T43:~/ajce/mca$ cd ab
+student@T43:~/ajce/mca/ab$ madir one
+
+Command 'madir' not found, did you mean:
+
+  command 'mmdir' from deb simh
+  command 'mkdir' from deb coreutils
+  command 'maddr' from deb mblaze
+  command 'mdir' from deb mtools
+
+Try: apt install <deb name>
+
+student@T43:~/ajce/mca/ab$ mkdir one
+student@T43:~/ajce/mca/ab$ ls
+one  out.txt
+student@T43:~/ajce/mca/ab$ mkdir two
+student@T43:~/ajce/mca/ab$ mkdir three
+student@T43:~/ajce/mca/ab$ ls
+one  out.txt  three  two
+student@T43:~/ajce/mca/ab$ mv one two
+student@T43:~/ajce/mca/ab$ ls
+out.txt  three  two
+student@T43:~/ajce/mca/ab$ cd ..
+student@T43:~/ajce/mca$ ls
+ab  intmca  le
+student@T43:~/ajce/mca$ man cat
+student@T43:~/ajce/mca$ 
+

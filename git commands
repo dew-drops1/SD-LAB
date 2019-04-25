@@ -1,0 +1,113 @@
+student@T43:~$ cd tintugit
+student@T43:~/tintugit$ git init SampleRepo
+Initialized empty Git repository in /home/student/tintugit/SampleRepo/.git/
+student@T43:~/tintugit$ cd SampleRepo
+student@T43:~/tintugit/SampleRepo$ git add file1.txt
+fatal: pathspec 'file1.txt' did not match any files
+student@T43:~/tintugit/SampleRepo$ gedit file1.txt
+student@T43:~/tintugit/SampleRepo$ git add file1.txt
+student@T43:~/tintugit/SampleRepo$ git config user.name "dew-drops1"
+student@T43:~/tintugit/SampleRepo$ git config user.emai "tintukl@mca.ajce.in"
+student@T43:~/tintugit/SampleRepo$ git config user.email "tintukl@mca.ajce.in"
+student@T43:~/tintugit/SampleRepo$ git commit -m "while program"
+[master (root-commit) dc0f38c] while program
+ 1 file changed, 6 insertions(+)
+ create mode 100644 file1.txt
+student@T43:~/tintugit/SampleRepo$ git status
+On branch master
+nothing to commit, working tree clean
+student@T43:~/tintugit/SampleRepo$ git remote add origin https://github.com/dew-drops1/SampleRepo
+student@T43:~/tintugit/SampleRepo$ git push origin master
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 269 bytes | 269.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/dew-drops1/SampleRepo
+ * [new branch]      master -> master
+student@T43:~/tintugit/SampleRepo$ git init
+Reinitialized existing Git repository in /home/student/tintugit/SampleRepo/.git/
+student@T43:~/tintugit/SampleRepo$ cd tintugit
+bash: cd: tintugit: No such file or directory
+student@T43:~/tintugit/SampleRepo$ cd ..
+student@T43:~/tintugit$ git init TestRepo
+Initialized empty Git repository in /home/student/tintugit/TestRepo/.git/
+student@T43:~/tintugit$ cd TestRepo
+student@T43:~/tintugit/TestRepo$ git config user.name "dew-drops1"
+student@T43:~/tintugit/TestRepo$ git config user.email "tintukl@mca.ajce.in"
+student@T43:~/tintugit/TestRepo$ gedit README
+student@T43:~/tintugit/TestRepo$ gedit sample.c
+student@T43:~/tintugit/TestRepo$ git add README
+student@T43:~/tintugit/TestRepo$ git add sample.c
+student@T43:~/tintugit/TestRepo$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   README
+	new file:   sample.c
+
+student@T43:~/tintugit/TestRepo$ git commit -m "c program"
+[master (root-commit) e1f81ca] c program
+ 2 files changed, 7 insertions(+)
+ create mode 100644 README
+ create mode 100644 sample.c
+student@T43:~/tintugit/TestRepo$ git remote add origin https://github.com/dew-drops1/TestRepo
+student@T43:~/tintugit/TestRepo$ git push origin master
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+remote: Repository not found.
+fatal: repository 'https://github.com/dew-drops1/TestRepo/' not found
+student@T43:~/tintugit/TestRepo$ git remote add origin https://github.com/dew-drops1/TestRepo
+fatal: remote origin already exists.
+student@T43:~/tintugit/TestRepo$ git push origin master
+Username for 'https://github.com': dew-drops
+Password for 'https://dew-drops@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/dew-drops1/TestRepo/'
+student@T43:~/tintugit/TestRepo$ git clone https://github.com/dew-drops1/SampleRepo
+Cloning into 'SampleRepo'...
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+student@T43:~/tintugit/TestRepo$ cd ..
+student@T43:~/tintugit$ git init test
+Initialized empty Git repository in /home/student/tintugit/test/.git/
+student@T43:~/tintugit$ cd test
+student@T43:~/tintugit/test$ gedit file1.txt
+student@T43:~/tintugit/test$ git config user.name "dew-drops1"
+student@T43:~/tintugit/test$ git config user.email "tintukl@mca.ajce.in"
+student@T43:~/tintugit/test$ git add file1.txt
+student@T43:~/tintugit/test$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   file1.txt
+
+student@T43:~/tintugit/test$ git commit -m "description"
+[master (root-commit) 497f3d8] description
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1.txt
+student@T43:~/tintugit/test$ git remote add origin https://github.com/dew-drops1/test
+student@T43:~/tintugit/test$ git remote add origin https://github.com/dew-drops1/test2
+fatal: remote origin already exists.
+student@T43:~/tintugit/test$ git push origin master
+Username for 'https://github.com': dew-drops1
+Password for 'https://dew-drops1@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/dew-drops1/test/'
+student@T43:~/tintugit/test$ 
+
